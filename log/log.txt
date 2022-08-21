@@ -10757,3 +10757,38 @@ osxver
 2022-08-21T12:51:57+00:00 - save config to file
 2022-08-21T12:51:57+00:00 - all done
 2022-08-21T12:51:57+00:00 - ------------------------------------------------------------
+2022-08-21T13:02:33+00:00 - check local config
+2022-08-21T13:02:33+00:00 - local config decoded
+2022-08-21T13:02:33+00:00 - chromecast scan started
+2022-08-21T13:02:34+00:00 - live: [Shelf speaker]
+2022-08-21T13:02:34+00:00 - live: [Study speaker]
+2022-08-21T13:02:34+00:00 - live: [Study mini]
+2022-08-21T13:02:34+00:00 - chromecast scan done - 3 results
+2022-08-21T13:02:34+00:00 - details check for Ines Mini started
+2022-08-21T13:02:34+00:00 - details check for Ines Mini done
+2022-08-21T13:02:34+00:00 - details check for Kitchen Display started
+2022-08-21T13:02:34+00:00 - details check for Kitchen Display done
+2022-08-21T13:02:34+00:00 - details check for Master bedroom TV started
+2022-08-21T13:02:34+00:00 - details check for Master bedroom TV done
+2022-08-21T13:02:34+00:00 - details check for Max Mini started
+2022-08-21T13:02:35+00:00 - details check for Max Mini done
+2022-08-21T13:02:35+00:00 - details check for Old Speakers started
+2022-08-21T13:02:35+00:00 - details check for Old Speakers done
+2022-08-21T13:02:35+00:00 - details check for Polk started
+2022-08-21T13:02:35+00:00 - lite check for Polk started
+2022-08-21T13:02:35+00:00 - lite check for Polk done
+2022-08-21T13:02:35+00:00 - details check for Polk done
+2022-08-21T13:02:35+00:00 - details check for Shelf speaker started
+2022-08-21T13:02:35+00:00 - details check for Shelf speaker done
+2022-08-21T13:02:35+00:00 - details check for Study mini started
+2022-08-21T13:02:35+00:00 - details check for Study mini done
+2022-08-21T13:02:35+00:00 - details check for Study speaker started
+2022-08-21T13:02:35+00:00 - details check for Study speaker done
+2022-08-21T13:02:35+00:00 - details check for TV Speakers started
+2022-08-21T13:02:37+00:00 - details check for TV Speakers done
+2022-08-21T13:02:37+00:00 - details check for Vodafone TV started
+2022-08-21T13:02:37+00:00 - details check for Vodafone TV done
+2022-08-21T13:02:37+00:00 - clean and sort
+2022-08-21T13:02:37+00:00 - save config to file
+2022-08-21T13:02:37+00:00 - all done
+2022-08-21T13:02:37+00:00 - ------------------------------------------------------------
