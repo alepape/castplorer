@@ -91,7 +91,7 @@
                 "product_name": "mushroom",
                 "public_key": "MIIBCgKCAQEArW9gqp9LLukItfRziUIbU4tyKQnfnfdcp\/+BUIeV2IqniaPXSqnmh6H8tkckxjxgyNL3QDskRQoSeMqftmhB15s0B4Brb+PGt0\/p6wFvw1vDp+9qX4+mx+sl4acValGRCs6rZiCSUpqm27r\/xZs4PI98JmmwSQabu4rU+sia0a23SDH\/JQIzKuh0Nag6QNPi3tap9qN8etXZiJtGgqwNKFHc8htoV7UkP\/KOy3JGUF\/L22Qr20dmtNKBIXwwJd2OkiXhX9PPsQOObg874dQdGJ4bDOwMMyh2ufTyBGWJIgbXe5MzFnIsDlbrSU6pnX8bxML9BsXu7Zpx+MsMi1xYXQIDAQAB",
                 "ssdp_udn": "825bf832-6a4d-3d90-094d-4fa4e113c85c",
-                "uptime": 65342.613617,
+                "uptime": 71923.256766,
                 "weave_device_id": ""
             },
             "multizone": {
@@ -182,8 +182,8 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIID9TCCAt2gAwIBAgICAMMwDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCVVMx\nEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxEzAR\nBgNVBAoMCkdvb2dsZSBJbmMxDTALBgNVBAsMBENhc3QxFTATBgNVBAMMDENhc3Qg\nUm9vdCBDQTAeFw0xNzAxMzExOTExNDVaFw0yNzAxMjkxOTExNDVaMIGKMQswCQYD\nVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4g\nVmlldzETMBEGA1UECgwKR29vZ2xlIEluYzENMAsGA1UECwwEQ2FzdDEqMCgGA1UE\nAwwhQ2hyb21lY2FzdCBJQ0EgNyAoQXVkaW8gQXNzaXN0IDIpMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEArO1k1KMsKSHSDov+FdABQ0G0uL0KJKTt4LEo\nkj1QiKqCDx3Tx3cahDpX+Bhs\/knlfFJiILCKE1VruizCQbRN0xX+lp6PB+Uuf58J\nKgwrTL8m99N4ty9ZcmcCBgeCqvH4T3Jgx1EEMWkWnY6++aytlADGSaP+PGKDybkk\nrh0Z4awlz40rzt5jBO8mJDxA9kfgfBGLsJJq4Yus38spPe\/VUuFtZiQoo8omuGUi\ngJVvYp+oooxviINuy54DqMGMv\/tE1pUs9Vu3Ji2PDLPzpKa8TM1WPatXVRC4ywhd\nMOuJVgSDWVmQyI\/Y3fOF3qmeRyZisXBuu73YfFIlidYu1A8r+wIDAQABo3kwdzAP\nBgNVHRMECDAGAQH\/AgEAMB0GA1UdDgQWBBQdMmTYcYTJBg3EeEfYjUoOiu5u+DAf\nBgNVHSMEGDAWgBR8mh5933lUvNfMXsqZhkV5ZXQoGTALBgNVHQ8EBAMCAQYwFwYD\nVR0gBBAwDjAMBgorBgEEAdZ5AgUCMA0GCSqGSIb3DQEBCwUAA4IBAQA+FJg3upEh\nBVJxfb\/nD\/fF2bo8XxBUHYe07atzPJsXZ\/ubFbnfzhKEuFG5vfxI+I8m6JgWSmLQ\niQWKD1cICUDEI5M8A+KXnWzbBxpQl424DpfIkdDtiE5loB8NIN3ahQEt7voy484e\ne7oAIW+12JGZ2OtT74K+0UbT6TmBbU0EfjeE7KS86CqP5LL1KUCMh2IPEYh286bu\nW0O1nIncvd1nr5XKWRbDXjU3\/xxB6EggBaA00VSqVwZg0ULo\/vKPlT5V+6OrdzJ0\nR8xhwC0sgvrMCNtexOhmCMzDsFTQKK6myB789KbyLPTJpFNIoloFLjOHKnlCQV8c\nqZkA30LcH68M\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "QAZekSjMFpiTWTJe",
-                "signed_data": "dk\/sKEzsVPbsDy8mX+6ZI7yludR66ku1MzcxDDBehyzzVF2xFMX2Tm6yG+y3iZHtQULnwsk7bzKB4tmiTysx4ryf9GwLCgpOiQ1hl\/Hsl7DslUSvnwgZCybzZ+wI2QjV+7kkIhZL9+Sc\/1Ikrl44fUlVDdvmM5LN41J56crBhoIA5fsntP3khETnB60liXLsDrMnnAhT1yQCfgmpHTy0fE3\/84nfYSGukB9aQgRkRhl5aS5R1li2ae\/H3Kx5TirDJXkvYBXrb1rHjbZ\/HbMUMGeyYiWb1Yjpac80K7o8tsL69ney0GtT4r4lq\/ZTKFzRHvs0xZzb0iTBbzcxKaULCA=="
+                "nonce": "pWIWQ1cDrMVZqRPC",
+                "signed_data": "NufHClLwclnkdCIQ54I9aEF3e6r4Nq\/xIU5e4pdwuBexTacKH0apUTm7QTVym6sVB+kYmPO8sHXAHtfPlIuDS0v\/R1OOHWq+Vkf\/a6rcvpu+J7bvOSOViW+iPB8\/GxaqnwDn0kjHMZz7wau4DPMmT1\/EWc4A9MuVID\/SHBV2pDQlmSI0WCacGQpsCOvcy\/wZWLT0qbRmJ\/epGxJZYc0ML0MEfAGDmJJ7JEIVV1r9Ej4Zv4qyeBWwm\/1YOvaYWkbgAi7A7RKEg4\/keOvjSsW55AGYNsqzAWsb4Y4NV7vBamToIIukfPThw+XYiA+O5K66HbbgwlkYceeiHZSsHicbiA=="
             },
             "user_eq": {
                 "high_shelf": {
@@ -203,8 +203,8 @@
             "wifi": {
                 "bssid": "3c:37:86:7c:0d:3f",
                 "has_changes": false,
-                "noise_level": -96,
-                "signal_level": -26,
+                "noise_level": -93,
+                "signal_level": -30,
                 "ssid": "AlexSTD",
                 "wpa_configured": true,
                 "wpa_id": 0,
@@ -309,7 +309,7 @@
                 "public_key": "MIIBCgKCAQEAr6AVA7ygO9RN4qy2pGSwx6DT+9VtcRePCTTjVWytEyaPMmmaXWfyqI4z50BWLcHRcZxwgqsdWedev5C8qrSYMqLYFK4DjoEcC070Z50J7DAJQ8TgIdi4lFJcQN8b8wbEuG\/3PACqDhFc2ZSjoLaD9taSCgRwegZb65FNxrdeIDaPRL3VYGJRNjs7mCS7sz3RbarKNpSJAOCkJWvbM8YnfXudTE3aYLDkVKEd4GnsiDIOYolXd53IvKU8jdTvmfIsB3XZNAnsaPQyMPdTP7\/eE3l4g0\/W5ecvJDHCs59zufYjed9XTByf93\/EhxY0M2lNqBHU4wX07iOyXamm+e4VrwIDAQAB",
                 "ssdp_udn": "8f48b922-d438-bda6-1dcc-5a7fc32f5ff6",
                 "uma_client_id": "d743aa48-ba75-4cbc-8384-b24c41bcaf3e",
-                "uptime": 41084.106967,
+                "uptime": 47664.7579,
                 "weave_device_id": "64166600598D2597"
             },
             "multizone": {
@@ -397,8 +397,8 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIID3TCCAsWgAwIBAgICAaAwDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCVVMx\nEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxEzAR\nBgNVBAoMCkdvb2dsZSBJbmMxDTALBgNVBAsMBENhc3QxFTATBgNVBAMMDENhc3Qg\nUm9vdCBDQTAeFw0xOTAxMDEwODAwMDBaFw0zOTEyMjcwODAwMDBaMIGLMQswCQYD\nVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4g\nVmlldzETMBEGA1UECgwKR29vZ2xlIEluYzENMAsGA1UECwwEQ2FzdDErMCkGA1UE\nAwwiQ2hyb21lY2FzdCBJQ0EgMjIgKFZpZGVvIEFzc2lzdCA0KTCCASIwDQYJKoZI\nhvcNAQEBBQADggEPADCCAQoCggEBAOaeQLO4W2cz2UvR1YSBy+WruZlvw7hjL4+t\n7hinw5wY15xS5GeFDBXJ0HAmuApRh8Ew+d20bE86\/MlgyceqlvpsTiQxcqO6jXIY\n30svXiBohjWN18MeXYC5RzaSCI\/ZGn6PdmORpA2o78zlGWMEKAbvfhJ1uoCT2PoK\n\/IC8TBC+nlP5MDyzl3nZ8PwqMtd0exjVOBM4Eqcsy0I2dun\/KfCI+\/yB8qqtpkWX\nmQBSLGJoLXwqD+35f2HixDTxUjNKzhAwqfaGP\/5VroFG\/lfTpIwXlWA0R9\/SlFrn\nefzfbjGg0t5OOd0ezrtlyiKoTxWodDk+K8KS4FgronrEyz5qUrsCAwEAAaNgMF4w\nDwYDVR0TBAgwBgEB\/wIBADAdBgNVHQ4EFgQUcuUhXHz0Wjebbi6Val3VzaSrWXQw\nHwYDVR0jBBgwFoAUfJoefd95VLzXzF7KmYZFeWV0KBkwCwYDVR0PBAQDAgEGMA0G\nCSqGSIb3DQEBCwUAA4IBAQArZZCHwc6L1ABqopNsMJvZ2yAwqcYyd8R1SoP27+cd\nIOF3CQlgPM4WQwMWntd1b4gssTGIVgCFvtgt65u8+pRQ+Pq1v7PciovJ+b25kVIW\nY3tOFd87SXHNbQnu47oPUfxSZR0WB7OZCU4pYBotj0IqLl4GJj0yRvosOImMve2p\nNv2TztCdOdo52G98aos+K7BIM1b4KLVemKJEjECljXt+A+xVrSKV5SyGpkdIkMmL\nL\/F\/NxA1n6dKuH\/j\/9oR\/eazJpS9yvyBcQDqAbN0sji4TuzbNsnqZPFD6Y5lWbBM\nrdH\/NsCjGCHruwgkHXVMjCf0KicaZP9ysKaMHb1rUfpg\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "TEASpMm20wqTztkF",
-                "signed_data": "OaldTaob6lhgaH\/jF+y1E3SZZJxw+\/tcD8WKyNkLl7FISoCuYxAZLQdlhGTArUiK6UpdFOCWhPuggU3m0txj+313ViNcAffh0lrw5b5SXkaDVYStmDI0I87JhEP5AIRns4RA4gekOlIlOb9hnBmLcGKgP9hkVNRr4eF7Wv5XgfwUSbE3WRWrPiWcK2e35CwR6uZSGbfMIUNVty2orTR9IirZOsZ3aXvneAKXuyzl4cGg8yQGhHNK7JrUkmgy3OeOVigRNvHE5J8o5cdPFuesqlEp7DQ3i6Ir7gKp08WPqijfJq5NzGf2myiOZmvfXhxsgtzkzxpPM7O9Et3UO0QP6g=="
+                "nonce": "922E+tPmmNtSTBE6",
+                "signed_data": "Ho9hhsd9yxnKbja8VEz9EHemMK3a5IuDlFixaCn2QXLCdAfs7hR8TSAToiejw5slXq2+c1fJCVgDft+ND+F0BMLHqTiLbTimIvP2eABbdtdZgcRTuzRu0JcIsleWkPsEkIDF\/ZVI28hzUc+4V8vJfv8\/MArPhFF7twvU4e2NRdjCG9I42KbPmuLttRcX2X\/qyoGTDkozztABUgH\/rhTDeYVogRacej+sAKTaTl+ZScvCVjR5FBOXyRZRDZD4JO7tuqFBPEXQgNAc0DVFcMiiFAiajMppKKij9eYm1c4R2dgCf9YHJaRYRj8IZQDs0X\/NXeZ7AEs6Eclv0I4yoI4qCg=="
             },
             "ultrasound": {
                 "enable_reactive": true,
@@ -423,7 +423,7 @@
                 "bssid": "3c:37:86:7c:0d:3e",
                 "has_changes": false,
                 "noise_level": -90,
-                "signal_level": -43,
+                "signal_level": -41,
                 "ssid": "AlexHD",
                 "wpa_configured": true,
                 "wpa_id": 0,
@@ -506,7 +506,7 @@
                 "product_name": "caprica",
                 "public_key": "MIIBCgKCAQEApTGSdyJKi79eLpt3St6KtZVgw33p8gvhHhmlnNIfwU0w81y2oYoOWAgmw\/ERwDkGo\/feljxq5eWx+edM7jNDbHXM0iL9NfQeTpJCGZDT9gi2SYHR3M03TmtT4OS3jTQLRVEa2sajF2jyBp7zoNXT9pRJJveAY2Fxh+GLDTQg8FXK2HJYanrcZbItfMu18Tnwfu0C3zBPFjTqPhg1jC3AuStZY5vn+mNwqzLaKYlV4WUTblaeLuLwWD4nsuDpu\/I0QBEJ0vzk30SdttdWwOLbT2uwtd1jcG8Q+wDBkgs2+q1qvzMlIUu\/lak87VKwIxkF1tpWko3GUYjktL39i3BMawIDAQAB",
                 "ssdp_udn": "218e3651-1283-cbae-3d97-5a46919fd1e0",
-                "uptime": 66441.34492,
+                "uptime": 73021.869274,
                 "weave_device_id": ""
             },
             "multizone": {
@@ -575,15 +575,15 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIIDyzCCArOgAwIBAgICATIwDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCVVMx\nEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxEzAR\nBgNVBAoMCkdvb2dsZSBJbmMxDTALBgNVBAsMBENhc3QxFTATBgNVBAMMDENhc3Qg\nUm9vdCBDQTAeFw0xODAyMDIxOTQ2NTVaFw0zODAxMjgxOTQ2NTVaMHoxCzAJBgNV\nBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1Nb3VudGFpbiBW\naWV3MRMwEQYDVQQKDApHb29nbGUgSW5jMQ0wCwYDVQQLDARDYXN0MRowGAYDVQQD\nDBFDaHJvbWVjYXN0IElDQSAxMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC\nggEBAKOPE0n8hU+tPmA0DpzENHfuxeDIH2XFRB25XaYzG\/eVYs8LdOE87QU4DC52\n2WXQXq4oZUO97YMZZFgsWl\/nLf2XYoB1\/QhWPIEyPYiApq8A+nhbWMJkdNlvCov4\n9PHkKGQ4qLyf5sU5vvLtfBCHC4sBTz4Uwd+oMoZdoTrTEfEEAFuOZ4GFLL3difAL\nJ3+QLp3Ac4ZS\/c4QWKSa1gi+spdAgT48Hv\/1pIGC2NT5jHAQGo3gXzOk3e7xKa1H\nyE8aYQTvMVo+mzsqPkO0h+RBSl\/y4iZve1OOCommWC5yC0FafhpK5kmd2hcximNR\nvCtH8pFpa6jV2uTdQXYKGp1DLicCAwEAAaNgMF4wDwYDVR0TBAgwBgEB\/wIBADAd\nBgNVHQ4EFgQU56PENciX9\/vtBXU6EvWaWMiY9qcwHwYDVR0jBBgwFoAUfJoefd95\nVLzXzF7KmYZFeWV0KBkwCwYDVR0PBAQDAgEGMA0GCSqGSIb3DQEBCwUAA4IBAQBf\nF0j6+pfltjyG0TSpGDaBub9RGIyOaXwDvQuHvnUs\/RWG0u0VyQigU30klMQT2Ilz\nfl+8hqI7ao6lN\/RVglWMsCubVp4J4rZHX2lQaDJi5+2q2sqHBVD7hH0pqbBl85p4\nDkr5s4secVjMdLAcYECUqLseEb4xd1jiHL6cuXn7JnUazI3YHMIuu8WOnyD\/f+b7\ngEVaR0kjFzOBWm\/Yb0ErEdGgDx6T+KFxf6VZxeXunV9nEUZkfVt3pfF137sXax5u\nfk6OzzgwaTODTqdmGAHmtTTCEqaa28Ei4XvIf31z987gJlZoZMygL3pxk4GKS60w\nTFUkGoyKoDcWUMLn0Pqy\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "LNw3lx82Vl0f9rCp",
-                "signed_data": "Z6H35w9TqHFLzGoAYroZ4WfrH8skN8qlF9mzgDHZScGx9PxO+5iO0iewqONYvvbjtspPg\/Ua9eJxopc9DG3jyvEeTON33TRt\/q3K1+QB3ZMjfTwSj3yOO+bviHM0nUyBQSWCdSn3figQF9wJeiW2+IgkzEG0Y2uX2aEhWdCz8UP4CVNmQ4SY7JDRwA8aDwx9apPnqi6tEQTfneJwigvFFdiUcFvMXWnWOzciD5aT2rN0ZI7xtjM2b+w5Yy9wJRthh0sf9o6Wib8RL6aPCq+dXqY2F9nz8Mv0K3Aj5ppvK\/MuQKgHxG2AET9e3R0s94bh2KNJJFCtSr23Iub313srXw=="
+                "nonce": "nQkTS1WzYulL9PC0",
+                "signed_data": "c3FhTQnHBMBEmUEwtuAv1UKHMDUPpbGPgKcYPLam0ZebOm4qUlNYPxTdXH\/lKvWC9q+5kZ5nVUaMR29hLnFa05dCQhWM2srZyNDLx5Akfq8DSyLNeSWzmJu0XBmQrxJ59sRHirq5GKef49w4Rx8A3CsvVwTZg47gpDsSpFontN0yFI9fQzgXVEpPxzXduPLuL\/dROcQgqB4TV55\/cnw5QXk5AzeoN5WwCudduseTu15WW415a0yO7X8QqS27dkRxtDNodADPg6k933gEtDdTE8WCuOK0jRa+qbZTSvlWF+34kE1XEupnEQkYwSCHz2iD2cSeIV5hAw3YkugbGcqRUg=="
             },
             "version": 12,
             "wifi": {
                 "bssid": "8c:3b:ad:2c:4b:0e",
                 "has_changes": false,
-                "noise_level": -84,
-                "signal_level": -35,
+                "noise_level": -92,
+                "signal_level": -41,
                 "ssid": "AlexUPST",
                 "wpa_configured": true,
                 "wpa_id": 3,
@@ -683,7 +683,7 @@
                 "product_name": "mushroom",
                 "public_key": "MIIBCgKCAQEArCWW6BQyYoWgXeLYWxKSmFnaZB2wk0QcKrq2\/S01a+LQlTGmiIlaNtWVz8zLjGVGT4WyTG9OX1\/L2BRsshoXIOV0l8qXPLHLGMtQMQcuuP0Lok8x7A+Wcj80n6KvUbZeSV+pN8u14tIwL55yzBm7HAm+UvBrlaB8rbXp0NhrOJeznan6oL1P97W1EpVELkWVzVR4SfRoZzQHSGeOFGNCf2N02sRSk+u2ucZM9FPMoax\/wQQEUiYFD4WGyLaC1n85M3tXQR2dfq9rhrvpIEzAavARCTFuAzUH6NbccipFFsv91uXEI91PiliAwPY\/dIwRhAbc+WZ360XKeok5OSAOgQIDAQAB",
                 "ssdp_udn": "2dc829ee-f51f-a331-9a82-a96bc9d54d1b",
-                "uptime": 66788.687563,
+                "uptime": 73369.356885,
                 "weave_device_id": ""
             },
             "multizone": {
@@ -774,8 +774,8 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIID9TCCAt2gAwIBAgICAMMwDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCVVMx\nEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxEzAR\nBgNVBAoMCkdvb2dsZSBJbmMxDTALBgNVBAsMBENhc3QxFTATBgNVBAMMDENhc3Qg\nUm9vdCBDQTAeFw0xNzAxMzExOTExNDVaFw0yNzAxMjkxOTExNDVaMIGKMQswCQYD\nVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4g\nVmlldzETMBEGA1UECgwKR29vZ2xlIEluYzENMAsGA1UECwwEQ2FzdDEqMCgGA1UE\nAwwhQ2hyb21lY2FzdCBJQ0EgNyAoQXVkaW8gQXNzaXN0IDIpMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEArO1k1KMsKSHSDov+FdABQ0G0uL0KJKTt4LEo\nkj1QiKqCDx3Tx3cahDpX+Bhs\/knlfFJiILCKE1VruizCQbRN0xX+lp6PB+Uuf58J\nKgwrTL8m99N4ty9ZcmcCBgeCqvH4T3Jgx1EEMWkWnY6++aytlADGSaP+PGKDybkk\nrh0Z4awlz40rzt5jBO8mJDxA9kfgfBGLsJJq4Yus38spPe\/VUuFtZiQoo8omuGUi\ngJVvYp+oooxviINuy54DqMGMv\/tE1pUs9Vu3Ji2PDLPzpKa8TM1WPatXVRC4ywhd\nMOuJVgSDWVmQyI\/Y3fOF3qmeRyZisXBuu73YfFIlidYu1A8r+wIDAQABo3kwdzAP\nBgNVHRMECDAGAQH\/AgEAMB0GA1UdDgQWBBQdMmTYcYTJBg3EeEfYjUoOiu5u+DAf\nBgNVHSMEGDAWgBR8mh5933lUvNfMXsqZhkV5ZXQoGTALBgNVHQ8EBAMCAQYwFwYD\nVR0gBBAwDjAMBgorBgEEAdZ5AgUCMA0GCSqGSIb3DQEBCwUAA4IBAQA+FJg3upEh\nBVJxfb\/nD\/fF2bo8XxBUHYe07atzPJsXZ\/ubFbnfzhKEuFG5vfxI+I8m6JgWSmLQ\niQWKD1cICUDEI5M8A+KXnWzbBxpQl424DpfIkdDtiE5loB8NIN3ahQEt7voy484e\ne7oAIW+12JGZ2OtT74K+0UbT6TmBbU0EfjeE7KS86CqP5LL1KUCMh2IPEYh286bu\nW0O1nIncvd1nr5XKWRbDXjU3\/xxB6EggBaA00VSqVwZg0ULo\/vKPlT5V+6OrdzJ0\nR8xhwC0sgvrMCNtexOhmCMzDsFTQKK6myB789KbyLPTJpFNIoloFLjOHKnlCQV8c\nqZkA30LcH68M\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "deDk3ESx7EC7lW0f",
-                "signed_data": "I79q6DUYjIKbGAp8WTc7GLkZ8Kaw23Ma3AaEvLLbqhnBTTfDK9EDZTZQv9KrujLCxXgR5ZJPNGeiA+SicDfENFqvAMedJLeAbIIBc6stiNSXZBretTaXwPvpjvqRt8BlkibsFIyms3XPG5\/EUxfUXEo+SN99flO9rzX2VWuuJNsI5j\/h4B24833Iefx0kn8QfiZCD06upFUFf\/\/3Tl85BbcIb4jzguNK8oAFeibWtC8PU0woCh5LtvheOdYjqUV5gffSBYvIZ5yecr1SvmpL9U80\/fByK8QAWYjIlN2CvQEevNpZBX9+jtif9+t5SLkDncCbJZM\/8vf57BGMZZmQNg=="
+                "nonce": "Dlc+Cd3WrQvRqnd6",
+                "signed_data": "F\/Mu3WIB95o1YjSSrwvYWLoZkkb7Xx3mwMYvL2Kz8+dp9gClHAvXemrwcQKujkoWApiyxc\/DBlKUsy8fdiqD3llR+MX87n986T1NUQWQP+BH8TqYHhM5jMBA08vezsHCFfKpQl8lY1Zh7PP8FtRUieo4UPjP2k9y7oBiin0sNyxeSj373oK8cIiY2Y08Wjp+Z9c0JfwC6aNXgitq3fPISKe\/Ma3A5otfcFQbWAK7d7SUSUdscpiRiaLThDdc+HF0FFjONvN1XTh+aot6Dj2aT6LFdNrNY7qX4VFXEsvXQre328SsUVyV\/+Kd2qiQwHRWuOVWWHDx8HtjFpoeipj\/Nw=="
             },
             "user_eq": {
                 "high_shelf": {
@@ -795,8 +795,8 @@
             "wifi": {
                 "bssid": "3c:37:86:7c:0d:3f",
                 "has_changes": false,
-                "noise_level": -88,
-                "signal_level": -38,
+                "noise_level": -95,
+                "signal_level": -37,
                 "ssid": "AlexSTD",
                 "wpa_configured": true,
                 "wpa_id": 0,
@@ -881,7 +881,7 @@
                 "product_name": "pepperoni",
                 "public_key": "MIIBCgKCAQEAy9fNeV7jLs2MzDPWNjkF+c+Vo+xoI35uolBPFHor1qGjU0cfm4Vbt5W4QLjmFN2qMS4xAXnXUovkQFafQVxxA2rVwAIAMOACFeFRJic\/N+VTVMnQla5CT3cuVlyrov8+KWYVZD\/XieMUHKTiNcsikbc2pzJGS4K98hH0sun6184PrBkcoutEtyRIQ+LzhdXpzfQKRvIdOYKv23qiwQRqdelWfN0Kg+DicD0p5lyMry5SJc02h9ngV3Ye6Xv8uhzGQ+QdTnzi3js7MrasGbqegWU0vvDqeZi2sDjDKz3mVlnUtsl9jVDHQ8c\/d5u1LKk0SGBytYb+OiQWQgt1DLp3lQIDAQAB",
                 "ssdp_udn": "74238377-4004-6e3d-c276-ee4dd65c3884",
-                "uptime": 36669.876182,
+                "uptime": 43250.480055,
                 "weave_device_id": ""
             },
             "multizone": {
@@ -950,8 +950,8 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIID6zCCAtOgAwIBAgIBJTANBgkqhkiG9w0BAQsFADB1MQswCQYDVQQGEwJVUzET\nMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4gVmlldzETMBEG\nA1UECgwKR29vZ2xlIEluYzENMAsGA1UECwwEQ2FzdDEVMBMGA1UEAwwMQ2FzdCBS\nb290IENBMB4XDTE1MDMxMjE2NDQ1N1oXDTI1MDMwOTE2NDQ1N1owgYExCzAJBgNV\nBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1Nb3VudGFpbiBW\naWV3MRMwEQYDVQQKDApHb29nbGUgSW5jMQ0wCwYDVQQLDARDYXN0MSEwHwYDVQQD\nDBhDaHJvbWVjYXN0IElDQSA0IChBdWRpbykwggEiMA0GCSqGSIb3DQEBAQUAA4IB\nDwAwggEKAoIBAQCsqb1tAE4pGWrJrjq0FIlL4klNM5As+7csDInDoMlbQGPj0beD\n+STcOcRsxKCfN7Ucjs3EybsyzbVrKLfyGNlMuCPMo01NSdb4bf59qeqRn9mue4x9\nahZWO+5WzAzd1W5C2DFtpj+ZpkDeAaFjVlg9tz85xFiHehVfLW0vnuhq46J6Gwfw\nqynQVH3tl4x1MyKZt91jOx\/XPtkASvSyA\/kw9M2CCwCXM2vnnASTOX52FfU9bLmB\ndbHmxq6Auk7dSHffRxKZAe3818mLy2H4kAd7k4lXNo+7aEod19VJ1uBNxgJ67lwK\nLIy3bRMAy39KPnwmHXEA9SelW8go6ydRDBW9AgMBAAGjeTB3MA8GA1UdEwQIMAYB\nAf8CAQAwHQYDVR0OBBYEFBPhXUQF\/8gfsVMwLVWwhf6LLQ2cMB8GA1UdIwQYMBaA\nFHyaHn3feVS818xeypmGRXlldCgZMAsGA1UdDwQEAwIBBjAXBgNVHSAEEDAOMAwG\nCisGAQQB1nkCBQIwDQYJKoZIhvcNAQELBQADggEBAJfV37jQR\/1QSCaLfaUWctCQ\ndW6MZ6SLb1B+HLchPBZAtU502USYXFoL7Qcu8usyBW51f7sYklg4riBxrZpQOt\/s\ntY0R+2K3lm\/gMrdLZoziq4xI05NKvoFLJU6CVLGkPFSbFkQUPl68D\/8eEi4MrV9A\nbvGSaVdIAOJKI4qMBrxu8MmQYkjeqUMuz19BJBfZHUwB\/0JLxKAEIUZLyVgsA1Np\nNKUHeEbXhzJMGJbQjICQClXs26V6vYgrtC\/OU6Rfi42z+zALLUDQdk5QsDo\/stb6\n8dZC8LENo9ukzk0qBCTJbvg6ne3wam5N3lCvVuum6it\/dIefhRTHqcDdwfMltbM=\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "E+wgZYPFlMs7jZP2",
-                "signed_data": "JLahb+7QthPCbVsM0Wawq\/KIudrCkq2FVzM6dYmy6nbAnVFVNeUwON5P5HdpI8p5lvYiKg9N\/5KFUi1J+1xUUZHNlb5v73GJsbbJY5N7uL0oeD2Z\/f\/qi06VF7qG6udWGaZu8M\/2XxrRWcczlu6YPKsSf6npPvCPp2DG8IIB\/t8f4y56nbpubxhWmYcnL3v7AwL2o5PgxGLtuIwINwWWU0BIpMqCfvhCvLDko9aKpXM\/C7HqPowweLeR9hxwb\/BhECd7Si8r\/5YxHKGoOJB+uxvFwwhmn0RuI7wGBZRb+Y0LacW2jRrRkJBrcyoIRiSB8pfPLJbF50Ei8lcXNtj40w=="
+                "nonce": "NE4doeQAy35ArFeO",
+                "signed_data": "sycRKa9cZ+mprz9\/p4m5GVSu8qFDNRiZ0p9mkwc+lHJJN57WE3Z1Z1NccIG\/SbbUGkz+c7f5A+Eh5wphK54UHg4fyI+k+6EjDkmMvJRvQSdB+t6UUx7R8svtZeKess\/hC6p2qRvfgavxa3byNBfOWtXWQI9pg7ou0P6hzvbzziJyNyFUWaNwANeEO1y89WakQDdi3UDhbXAr0g\/Jq9aNSwJZzbNVP+8Ft+HOoMdpOdq4IRYTPRKGAFuECiOkj5iujAcMc7VKsBjBBu0P5VsrnqzlkYsIWStGUNI7uv2YPaFco7gQu1kppF8PLFHRm9qZkr9k2iYqZ5o9n2UcrQXzqA=="
             },
             "user_eq": {
                 "high_shelf": {
@@ -971,8 +971,8 @@
             "wifi": {
                 "bssid": "3c:37:86:7c:0d:3f",
                 "has_changes": false,
-                "noise_level": -96,
-                "signal_level": -31,
+                "noise_level": -95,
+                "signal_level": -30,
                 "ssid": "AlexSTD",
                 "wpa_configured": true,
                 "wpa_id": 1,
@@ -1004,7 +1004,7 @@
             },
             "mac_address": "00:00:00:00:00:00",
             "name": "Polk",
-            "noise_level": -90,
+            "noise_level": -85,
             "opt_in": {
                 "crash": true,
                 "location": false,
@@ -1022,14 +1022,14 @@
                 "num_initial_eureka_info": 0,
                 "num_obtain_ip": 0
             },
-            "signal_level": -72,
+            "signal_level": -69,
             "ssdp_udn": "8f53706d-e081-12e4-0826-65b161fc7bc9",
             "ssid": "AlexHD",
             "time_format": 2,
             "timezone": "Australia\/Hobart",
             "tos_accepted": true,
             "uma_client_id": "faf3b207-0e2a-45b7-b7a6-33e28644cfae",
-            "uptime": 1227182.44,
+            "uptime": 1233763.02,
             "version": 9,
             "wpa_configured": true,
             "wpa_id": 0,
@@ -1114,7 +1114,7 @@
                 "product_name": "pepperoni",
                 "public_key": "MIIBCgKCAQEA9F\/0GofzutaHJyTK5GLkT8lJwkATr0Dta0wlyKvOIagBzYX21nItmBnMSN0142GaR5IaYuH2u0+t1kr8BPnXog7BQQrzQBQUhsW\/m7itd\/Q2a8Rm9LEAeis0lSmfkNbh4Ncz+P7pxHbV2r1P4dT0PN6bdKYn6xM1hYmtZEGXbiOAmatz9yc19QnW+aYf3Tqvxqc35thtzEMv9ggji\/VsBJvQ9XmEcCdhN+CM0NtHuLlSMGR\/AMapdA+Wf5YyaUcazhy7O4mr8OitY8BpbTLE1ls7rfBakLeVaHiO36RRkblC24qLGI6GcE6ymKqNf2nSVaXx4m1UodiGAIYuQ+qotQIDAQAB",
                 "ssdp_udn": "5ece30bd-ba29-222b-f7cb-bc57656ff39f",
-                "uptime": 41892.960284,
+                "uptime": 48471.602788,
                 "weave_device_id": ""
             },
             "multizone": {
@@ -1183,8 +1183,8 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIID6zCCAtOgAwIBAgIBJTANBgkqhkiG9w0BAQsFADB1MQswCQYDVQQGEwJVUzET\nMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4gVmlldzETMBEG\nA1UECgwKR29vZ2xlIEluYzENMAsGA1UECwwEQ2FzdDEVMBMGA1UEAwwMQ2FzdCBS\nb290IENBMB4XDTE1MDMxMjE2NDQ1N1oXDTI1MDMwOTE2NDQ1N1owgYExCzAJBgNV\nBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1Nb3VudGFpbiBW\naWV3MRMwEQYDVQQKDApHb29nbGUgSW5jMQ0wCwYDVQQLDARDYXN0MSEwHwYDVQQD\nDBhDaHJvbWVjYXN0IElDQSA0IChBdWRpbykwggEiMA0GCSqGSIb3DQEBAQUAA4IB\nDwAwggEKAoIBAQCsqb1tAE4pGWrJrjq0FIlL4klNM5As+7csDInDoMlbQGPj0beD\n+STcOcRsxKCfN7Ucjs3EybsyzbVrKLfyGNlMuCPMo01NSdb4bf59qeqRn9mue4x9\nahZWO+5WzAzd1W5C2DFtpj+ZpkDeAaFjVlg9tz85xFiHehVfLW0vnuhq46J6Gwfw\nqynQVH3tl4x1MyKZt91jOx\/XPtkASvSyA\/kw9M2CCwCXM2vnnASTOX52FfU9bLmB\ndbHmxq6Auk7dSHffRxKZAe3818mLy2H4kAd7k4lXNo+7aEod19VJ1uBNxgJ67lwK\nLIy3bRMAy39KPnwmHXEA9SelW8go6ydRDBW9AgMBAAGjeTB3MA8GA1UdEwQIMAYB\nAf8CAQAwHQYDVR0OBBYEFBPhXUQF\/8gfsVMwLVWwhf6LLQ2cMB8GA1UdIwQYMBaA\nFHyaHn3feVS818xeypmGRXlldCgZMAsGA1UdDwQEAwIBBjAXBgNVHSAEEDAOMAwG\nCisGAQQB1nkCBQIwDQYJKoZIhvcNAQELBQADggEBAJfV37jQR\/1QSCaLfaUWctCQ\ndW6MZ6SLb1B+HLchPBZAtU502USYXFoL7Qcu8usyBW51f7sYklg4riBxrZpQOt\/s\ntY0R+2K3lm\/gMrdLZoziq4xI05NKvoFLJU6CVLGkPFSbFkQUPl68D\/8eEi4MrV9A\nbvGSaVdIAOJKI4qMBrxu8MmQYkjeqUMuz19BJBfZHUwB\/0JLxKAEIUZLyVgsA1Np\nNKUHeEbXhzJMGJbQjICQClXs26V6vYgrtC\/OU6Rfi42z+zALLUDQdk5QsDo\/stb6\n8dZC8LENo9ukzk0qBCTJbvg6ne3wam5N3lCvVuum6it\/dIefhRTHqcDdwfMltbM=\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "4y+tKKfPiO\/ivq+Y",
-                "signed_data": "DEG0gAJeWR1rgOGdwiayW76mq9Ap8JArcE37mbrN0AL2dkv2YHIiY9riPSB0XvYK7vJxtBqFn4iq5g9RAHz8PhZUqIv1S4TMidoZFqUQWppzbAtIazlU1cGDTmcgt6EuS1fGvK+9QGp6GspqSrnubUENnY66e8slqZX3bCIeWATN8dGfPxawim3Vvp9kWOg3eiJxSAX6mOiabwtNQtyBFfCMFP\/nHvq6lfb1VF7niQBfIjWjlKHviHrmoUMgVH982ka0ZF+NlKRGtnnwu6+pItBS\/vlF8\/du6oB8n49INmtq79POEO3tZ29\/pQ40GaFE4t7daH7H+Xdp3lqU25CqcA=="
+                "nonce": "GXyBAvV7e2Q6eDBK",
+                "signed_data": "NTRyds1TiGC1SqnNrQSflkh9Ol0b1I21Q0DtvoDolyX3kSFc+g\/LeXEYOU60AE\/mc2go1tkgcr0xdN8CQ4IVmUxF+BKlEa54CCgMYOtCmRjYPPv0CPBDyF6rDM5Me9BgOHY9F1bIxXk8rHrxsn+bUDR7qh\/6M+fYt4xkGmpP\/tdSu0zaJu0wedRZVqsLT7\/zZ6rwTaoUNhWG6WnXy0UpUQEX\/Exkv1+X+jsOwyRvFFkWj6iEtPNWMrdblESv2mkbaJ+RmuPMPn6vrvMN4tV6y5rLV+0MWInQ7qlI4XRlnEhdKiJBlU30B6a8zuRyLyWqK06uFiWmrA1fdGr+JiBEig=="
             },
             "user_eq": {
                 "high_shelf": {
@@ -1205,7 +1205,7 @@
                 "bssid": "30:46:9a:0f:5f:31",
                 "has_changes": false,
                 "noise_level": -94,
-                "signal_level": -58,
+                "signal_level": -52,
                 "ssid": "AlexEXT",
                 "wpa_configured": true,
                 "wpa_id": 0,
@@ -1306,7 +1306,7 @@
                 "public_key": "MIIBCgKCAQEArGUNlRGB3AmVl\/CHMvD35ZL+vwZ295nyCUIqJHoZu2wmVYVBFG5ewgombnGh\/OWsI01AZLP8ZKgsrd7UPuqiDE6SfeWIf1cnBT+5xX21t6k9vzHP46XIpH+VmmSOyJuT7oCAMTbnIaeOJwfULS24VK68sIJONUFe\/W9Pxf+WLmYvIMmk47S9iTB+vx4QNRFSdhF2Zs6A44ULW\/TDUzZDwP9cWCEqf+biy0f7d7+IQeHWdyWihRiWpE4E7nnFKmqCRrxy5657SItnN5l9qB70ABaEIGcaOlaGZZu45IQOsgWH3GlaVGrT\/8hO3r\/BN8eqkmy1hXEkdHPyvTnu7EIVwwIDAQAB",
                 "ssdp_udn": "b7690f30-a1c3-7ac5-a88e-3bde4c460799",
                 "uma_client_id": "b4b835e5-2e6b-44b0-b4f6-097d949f1f6b",
-                "uptime": 42144.25922,
+                "uptime": 48723.043377,
                 "weave_device_id": ""
             },
             "multizone": {
@@ -1394,8 +1394,8 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIID9TCCAt2gAwIBAgICAMMwDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCVVMx\nEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxEzAR\nBgNVBAoMCkdvb2dsZSBJbmMxDTALBgNVBAsMBENhc3QxFTATBgNVBAMMDENhc3Qg\nUm9vdCBDQTAeFw0xNzAxMzExOTExNDVaFw0yNzAxMjkxOTExNDVaMIGKMQswCQYD\nVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4g\nVmlldzETMBEGA1UECgwKR29vZ2xlIEluYzENMAsGA1UECwwEQ2FzdDEqMCgGA1UE\nAwwhQ2hyb21lY2FzdCBJQ0EgNyAoQXVkaW8gQXNzaXN0IDIpMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEArO1k1KMsKSHSDov+FdABQ0G0uL0KJKTt4LEo\nkj1QiKqCDx3Tx3cahDpX+Bhs\/knlfFJiILCKE1VruizCQbRN0xX+lp6PB+Uuf58J\nKgwrTL8m99N4ty9ZcmcCBgeCqvH4T3Jgx1EEMWkWnY6++aytlADGSaP+PGKDybkk\nrh0Z4awlz40rzt5jBO8mJDxA9kfgfBGLsJJq4Yus38spPe\/VUuFtZiQoo8omuGUi\ngJVvYp+oooxviINuy54DqMGMv\/tE1pUs9Vu3Ji2PDLPzpKa8TM1WPatXVRC4ywhd\nMOuJVgSDWVmQyI\/Y3fOF3qmeRyZisXBuu73YfFIlidYu1A8r+wIDAQABo3kwdzAP\nBgNVHRMECDAGAQH\/AgEAMB0GA1UdDgQWBBQdMmTYcYTJBg3EeEfYjUoOiu5u+DAf\nBgNVHSMEGDAWgBR8mh5933lUvNfMXsqZhkV5ZXQoGTALBgNVHQ8EBAMCAQYwFwYD\nVR0gBBAwDjAMBgorBgEEAdZ5AgUCMA0GCSqGSIb3DQEBCwUAA4IBAQA+FJg3upEh\nBVJxfb\/nD\/fF2bo8XxBUHYe07atzPJsXZ\/ubFbnfzhKEuFG5vfxI+I8m6JgWSmLQ\niQWKD1cICUDEI5M8A+KXnWzbBxpQl424DpfIkdDtiE5loB8NIN3ahQEt7voy484e\ne7oAIW+12JGZ2OtT74K+0UbT6TmBbU0EfjeE7KS86CqP5LL1KUCMh2IPEYh286bu\nW0O1nIncvd1nr5XKWRbDXjU3\/xxB6EggBaA00VSqVwZg0ULo\/vKPlT5V+6OrdzJ0\nR8xhwC0sgvrMCNtexOhmCMzDsFTQKK6myB789KbyLPTJpFNIoloFLjOHKnlCQV8c\nqZkA30LcH68M\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "zJxmsZu\/EcV4DW7S",
-                "signed_data": "AebFGid6YwLm1hQpHc+OK8fJUqQPXwUKfXp8uc3YZIwkwQsafMM0NYrI4RN4uP\/XprHWBtXpV+T5QIn7t7CAGkWncWBa5QeVxJDoKDAqlc4ZH0dqlw\/mhP55JV\/NBv95nsh2hHFWg0xBRrdTYcWMV1+cJ2ML95VdCmLqsP1CL\/d5FcD4ui0ev6dgJ64zIO5sTsHYb+ty2xdNoWMKsRwpOVoEcvsAILc6ZoU4\/pZCLRFHeb0l\/d53ZmSaxyEtw+cy5nsTZHS5lac72HKfCBcD4YdtAbnUZT\/yEpD2klMfSFN8Qw9Ds\/C\/jhNJg5rEvi3O1fp1UR3voGvVW9lmSdTcuw=="
+                "nonce": "O071Yp2ZRC2RpzCw",
+                "signed_data": "BxfVeaPZzIZaXItur6NZbXOJa1NqjjQGiAxmUNeIWzS6kObxUMs6URuTbO4wIhknLKKXHKwS9Su03Av1RGqFGRu2cnSuL337xN\/lzzCTiB\/sT+vEGZspDpJDKcjXddm9J96vf2AVP0E\/5EhkiSywL0d6ugnu2L+2+Ovp9BxCiux7s0jrU+HMfUpWPfH\/CjJguGsi8GDAxm7wS9N8hr\/QwfU+41RBOxaUobfusIynJQhh3gYGMD6EtIa7utdQPtLwuFJtzTqxdSRfn\/sESlsuAq6IfWHSqJqM7RW733yJj1NmpRGDXVBYcoyCmJ2zo\/ftJeQhmMn056I9Fp+D\/P9BxQ=="
             },
             "user_eq": {
                 "high_shelf": {
@@ -1415,8 +1415,8 @@
             "wifi": {
                 "bssid": "30:46:9a:0f:5f:31",
                 "has_changes": false,
-                "noise_level": -89,
-                "signal_level": -37,
+                "noise_level": -88,
+                "signal_level": -38,
                 "ssid": "AlexEXT",
                 "wpa_configured": true,
                 "wpa_id": 0,
@@ -1501,7 +1501,7 @@
                 "product_name": "pepperoni",
                 "public_key": "MIIBCgKCAQEAo\/Oq\/ViHuK14ZKxXD3wwcHrnJAN6jzcbdzV5h8Q1bmT8knIZR1pTw3R0sYIMjXWE6b8HU2qo+y1EXNNJDRaOGqFpp2qixH8QrsmbIRfmYkQkRxMbYQJE+H\/nY19O2QF9M0ReZqYV8pKcVGoaJjx8vbc1D9n8ElMYMp05f50wE22+bnOmZ\/RW3Tqi1SPCfZOyFSc3L2h18Vocq+zkyngn1ApIuBir94c\/yWJkkaRH2dG1+Yn81stx\/CyqcPE1kTox89XUNbYiWh024ukL1eSjIPzlvAM5\/GWKa77DuE2F6aD+3qBMqY4XRrOEBa\/CYu\/S0fhxhxJBn6VxPDApQayUcwIDAQAB",
                 "ssdp_udn": "7f6008f3-55fb-f92a-9a37-d71d0dbcd47e",
-                "uptime": 60441.78683,
+                "uptime": 67020.35876,
                 "weave_device_id": ""
             },
             "multizone": {
@@ -1520,7 +1520,7 @@
                 "online": true
             },
             "opencast": {
-                "pin_code": "7588"
+                "pin_code": ""
             },
             "opt_in": {
                 "audio_hdr": false,
@@ -1570,8 +1570,8 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIID6zCCAtOgAwIBAgIBJTANBgkqhkiG9w0BAQsFADB1MQswCQYDVQQGEwJVUzET\nMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4gVmlldzETMBEG\nA1UECgwKR29vZ2xlIEluYzENMAsGA1UECwwEQ2FzdDEVMBMGA1UEAwwMQ2FzdCBS\nb290IENBMB4XDTE1MDMxMjE2NDQ1N1oXDTI1MDMwOTE2NDQ1N1owgYExCzAJBgNV\nBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1Nb3VudGFpbiBW\naWV3MRMwEQYDVQQKDApHb29nbGUgSW5jMQ0wCwYDVQQLDARDYXN0MSEwHwYDVQQD\nDBhDaHJvbWVjYXN0IElDQSA0IChBdWRpbykwggEiMA0GCSqGSIb3DQEBAQUAA4IB\nDwAwggEKAoIBAQCsqb1tAE4pGWrJrjq0FIlL4klNM5As+7csDInDoMlbQGPj0beD\n+STcOcRsxKCfN7Ucjs3EybsyzbVrKLfyGNlMuCPMo01NSdb4bf59qeqRn9mue4x9\nahZWO+5WzAzd1W5C2DFtpj+ZpkDeAaFjVlg9tz85xFiHehVfLW0vnuhq46J6Gwfw\nqynQVH3tl4x1MyKZt91jOx\/XPtkASvSyA\/kw9M2CCwCXM2vnnASTOX52FfU9bLmB\ndbHmxq6Auk7dSHffRxKZAe3818mLy2H4kAd7k4lXNo+7aEod19VJ1uBNxgJ67lwK\nLIy3bRMAy39KPnwmHXEA9SelW8go6ydRDBW9AgMBAAGjeTB3MA8GA1UdEwQIMAYB\nAf8CAQAwHQYDVR0OBBYEFBPhXUQF\/8gfsVMwLVWwhf6LLQ2cMB8GA1UdIwQYMBaA\nFHyaHn3feVS818xeypmGRXlldCgZMAsGA1UdDwQEAwIBBjAXBgNVHSAEEDAOMAwG\nCisGAQQB1nkCBQIwDQYJKoZIhvcNAQELBQADggEBAJfV37jQR\/1QSCaLfaUWctCQ\ndW6MZ6SLb1B+HLchPBZAtU502USYXFoL7Qcu8usyBW51f7sYklg4riBxrZpQOt\/s\ntY0R+2K3lm\/gMrdLZoziq4xI05NKvoFLJU6CVLGkPFSbFkQUPl68D\/8eEi4MrV9A\nbvGSaVdIAOJKI4qMBrxu8MmQYkjeqUMuz19BJBfZHUwB\/0JLxKAEIUZLyVgsA1Np\nNKUHeEbXhzJMGJbQjICQClXs26V6vYgrtC\/OU6Rfi42z+zALLUDQdk5QsDo\/stb6\n8dZC8LENo9ukzk0qBCTJbvg6ne3wam5N3lCvVuum6it\/dIefhRTHqcDdwfMltbM=\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "z8D48UBb3\/YBACdS",
-                "signed_data": "pwO5gU3fP5lv6gDcJQv0z2JiFW1LQtYERDflRwnVbvNNCUNInKHPhqh2vjVRvnDF+msaSiX9oEtJKiKBPlbdLCRxvs4IhATbg0dW3juRqq+hTfpaLWZ88k3zavWhNeCNW41yH7GwnVdFL9LVLhrkJ4psDZziiWnbB1FsrNYw73ROlsLzMXN4kh8QV9R1PzCzPMFoInTq13XLd23lIUOFsdEKHrPd8nYaQtAbB0898n1lux4GbQb\/I46v5OJGTS7MzNinwhNnVUHwvcPRHIFK63KuP5\/VCqJab4ZSXB0oxWvj\/Fbqs643mYt\/t1HP1hBunobtvAl0ivC+pPb6qVZvWA=="
+                "nonce": "8zX2xUcW0f39Do32",
+                "signed_data": "l69H5zM5Nwy+EbupqYRXHidj7d5mjswsbNC\/QUOxwodfawqT2FzPEsprznoBx2m5ZDXOqcpSqJ4pcuToe9kgU8CU3UVl2RyNMFtObSUzBhLCfrQmrJ8LdHCmqxAoEKjAo4ewLVI+rNuuVw76P5lFdPCUr6+SweYDkvJlsRn2YMJuGxS7A2F3VhqVp6PutTSQp5sdoqFEDAraUftYF+RaZKlDh+vL8AJsGUms4fM8tbEye4j50jsT4WcW+jcy12\/WYWnpX2vRoQzM1iLgsHMN1AGa6lB6L6gbrMQCDtA0arrnzIwLmiYjZSzdM4Mp739ZK8VGNT4tWyj48GVis33blg=="
             },
             "user_eq": {
                 "high_shelf": {
@@ -1592,7 +1592,7 @@
                 "bssid": "30:46:9a:0f:5f:31",
                 "has_changes": false,
                 "noise_level": -93,
-                "signal_level": -64,
+                "signal_level": -66,
                 "ssid": "AlexEXT",
                 "wpa_configured": true,
                 "wpa_id": 0,
@@ -1677,7 +1677,7 @@
                 "product_name": "pepperoni",
                 "public_key": "MIIBCgKCAQEAyScMq5X7fB2f\/B4N9CwOU0bsQ51u+b5Ts5zX61D39SD2VpRLoS9cC+W8rnj9DSPdmtJdx2GTiTN742rAhiCFrFDfVkOtWKSkoWtjI9c6vCRd0lsJYK0vEg\/X+7z5vTBtdW5afiqI0DyZx4sl75pYXNHsagalzladPHmg7irIVgOf18ohp9282UrJ\/tbG1H28cBthX8qr1+W4I2+B4ohzwEk\/noN3Wp\/14PvqO1MXgODfWIaqIfWd3Ai30oHUF\/rSAEIluGCZAacQ\/1kUu08rxIuUXZrdvvOfdu518PHBekJ44MU0RNsVdNEo+czykv1EQmcORd9VPJHV6TP+UJTBRQIDAQAB",
                 "ssdp_udn": "8c89b305-16da-7150-df72-2d3c45ae3b9f",
-                "uptime": 67268.478764,
+                "uptime": 73847.056433,
                 "weave_device_id": ""
             },
             "multizone": {
@@ -1746,8 +1746,8 @@
                 "intermediate_certs": [
                     "-----BEGIN CERTIFICATE-----\nMIID6zCCAtOgAwIBAgIBJTANBgkqhkiG9w0BAQsFADB1MQswCQYDVQQGEwJVUzET\nMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4gVmlldzETMBEG\nA1UECgwKR29vZ2xlIEluYzENMAsGA1UECwwEQ2FzdDEVMBMGA1UEAwwMQ2FzdCBS\nb290IENBMB4XDTE1MDMxMjE2NDQ1N1oXDTI1MDMwOTE2NDQ1N1owgYExCzAJBgNV\nBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1Nb3VudGFpbiBW\naWV3MRMwEQYDVQQKDApHb29nbGUgSW5jMQ0wCwYDVQQLDARDYXN0MSEwHwYDVQQD\nDBhDaHJvbWVjYXN0IElDQSA0IChBdWRpbykwggEiMA0GCSqGSIb3DQEBAQUAA4IB\nDwAwggEKAoIBAQCsqb1tAE4pGWrJrjq0FIlL4klNM5As+7csDInDoMlbQGPj0beD\n+STcOcRsxKCfN7Ucjs3EybsyzbVrKLfyGNlMuCPMo01NSdb4bf59qeqRn9mue4x9\nahZWO+5WzAzd1W5C2DFtpj+ZpkDeAaFjVlg9tz85xFiHehVfLW0vnuhq46J6Gwfw\nqynQVH3tl4x1MyKZt91jOx\/XPtkASvSyA\/kw9M2CCwCXM2vnnASTOX52FfU9bLmB\ndbHmxq6Auk7dSHffRxKZAe3818mLy2H4kAd7k4lXNo+7aEod19VJ1uBNxgJ67lwK\nLIy3bRMAy39KPnwmHXEA9SelW8go6ydRDBW9AgMBAAGjeTB3MA8GA1UdEwQIMAYB\nAf8CAQAwHQYDVR0OBBYEFBPhXUQF\/8gfsVMwLVWwhf6LLQ2cMB8GA1UdIwQYMBaA\nFHyaHn3feVS818xeypmGRXlldCgZMAsGA1UdDwQEAwIBBjAXBgNVHSAEEDAOMAwG\nCisGAQQB1nkCBQIwDQYJKoZIhvcNAQELBQADggEBAJfV37jQR\/1QSCaLfaUWctCQ\ndW6MZ6SLb1B+HLchPBZAtU502USYXFoL7Qcu8usyBW51f7sYklg4riBxrZpQOt\/s\ntY0R+2K3lm\/gMrdLZoziq4xI05NKvoFLJU6CVLGkPFSbFkQUPl68D\/8eEi4MrV9A\nbvGSaVdIAOJKI4qMBrxu8MmQYkjeqUMuz19BJBfZHUwB\/0JLxKAEIUZLyVgsA1Np\nNKUHeEbXhzJMGJbQjICQClXs26V6vYgrtC\/OU6Rfi42z+zALLUDQdk5QsDo\/stb6\n8dZC8LENo9ukzk0qBCTJbvg6ne3wam5N3lCvVuum6it\/dIefhRTHqcDdwfMltbM=\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "uKWFgKiDLTBHahxq",
-                "signed_data": "dfS6Qgkk0EzmQKimlKtEl5\/PDC+mIc1+sn+euk8JitRLa4z6GCmTD9jnBpR4pYJ0FP9DJk+gHVGQZAGWHcG0dU4EvREOQK93rG4MdAx95wHHRtL301b0csPWnBRyKEa86pXx2voAzb1YoDphREccSvZ+L8QS85Vp1aUkA2Gs8+08VFqX8PoDPQvDRIuEJ+lwAoprVXAP7+eXFcHQZ65hha3KTzLN21GqkcN7uuTx1w8vII091sezAOAvFhh\/ONyAz3wVNCHMgVEo7PDPGqMGxbCz9XC38LFR+4jKmbem6nzw810sJJBzXJOam2KfSk+2rEe2jwbUDuRRGm8nr84gyg=="
+                "nonce": "E2uA3VaSQhw91\/mH",
+                "signed_data": "NUprqULwJ0tgo\/L1u\/flb\/mVyMa6a9D+4pE3cypgiLyDiBPyz3QE+OG3chqEPVyNvOt6p2izliClrx9q\/wOFxT8X8ivh\/4pgO1\/NHilE5pnUnph\/77TXK9zY4PPV7tBIlWC9YHkL3GLkwKNr+3bCll49UoB6D5TKUi7N9irOPbWXRBSzrM3wALeVdtfK8G0w5lBTvTOaBlwmGu4R1x1BxpwKzUv5b1wIzR2kmL9mZU9g2shSThp39BDCPb9MXScZpbHbC9js048EMoiAJVColAGw78WHiIHMJnHN59WINikQQBkbK\/D0UxSQ0gPnizVTFMOzHN5yqEhsiaQe0kRJQw=="
             },
             "user_eq": {
                 "high_shelf": {
@@ -1767,7 +1767,7 @@
             "wifi": {
                 "bssid": "3c:37:86:7c:0d:3f",
                 "has_changes": false,
-                "noise_level": -92,
+                "noise_level": -88,
                 "signal_level": -38,
                 "ssid": "AlexSTD",
                 "wpa_configured": true,
@@ -1842,7 +1842,7 @@
                 "product_name": "uiw4030vha",
                 "public_key": "MIIBCgKCAQEAq6a0su8097IiizjOa0K1Qytnf+CkSKOiBNrHcObeP5zue2Rwq6jw1DqQStQ0nJ\/v0NEgXJqpq\/2QFTfDMx\/83ohVM49a\/3qkqpGkXNdT4Z8m658YLhBYHn7CSLT9sL0rViaIQb9gksW8q7VueiN02m9VzBhpTJ2gn\/CObdowjiTaGph\/cwIWNxIpYpzF2TEp0nEn6L3p\/q2B6sR6w+a9yUfFoqhBUaUQh2QIfFWkSYr3jQtdmxECZJaPgUhwv8o+H\/1YDZvr0kHYMdk7W3HtfK2FWX3eiNzZoHEgod\/xkyHNYOovY6\/npT+I1aC7EYDo4dDR9SIpWytU5+jtFCohGQIDAQAB",
                 "ssdp_udn": "e1191f6c-f03e-fd86-9e54-cbe33d85b49d",
-                "uptime": 3132027.47696,
+                "uptime": 3138605.943395,
                 "weave_device_id": ""
             },
             "name": "Vodafone TV",
@@ -1899,8 +1899,8 @@
                     "-----BEGIN CERTIFICATE-----\nMIID6jCCAtKgAwIBAgICAb4wDQYJKoZIhvcNAQELBQAwfTELMAkGA1UEBhMCVVMx\nEzARBgNVBAgMCldhc2hpbmd0b24xETAPBgNVBAcMCEtpcmtsYW5kMRMwEQYDVQQK\nDApHb29nbGUgSW5jMREwDwYDVQQLDAhXaWRldmluZTEeMBwGA1UEAwwVV2lkZXZp\nbmUgQ2FzdCBTdWJyb290MB4XDTE5MDEwMzAxNDQ1NloXDTM4MTIyOTAxNDQ1Nlow\ngZoxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApXYXNoaW5ndG9uMREwDwYDVQQHDAhL\naXJrbGFuZDETMBEGA1UECgwKR29vZ2xlIEluYzERMA8GA1UECwwIV2lkZXZpbmUx\nOzA5BgNVBAMMMlRlY2huaWNvbG9yIFRWIHVpdzQwMzB2aGEgQW1sb2dpYyBBTUxT\nOTA1IENhc3QgSUNBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4rAN\nLoIt7OBovGPIlcQlioI8ixENBMeFnoqCEfQGvCC97AhJ9U\/Y1zvIJibmgHsnUy+x\nxkL5Pno\/bUXh5EGCC2YBR5WXYtRNFifnd1ZN3Nx2Q3n4Vl01eA0Fi25HU24Debe7\n13IY4Uyavpb9TEVeIsbfyMZ03fpfq9Jca3En499ICXCQP4ECu3WP7I1nYbQ0uME3\n6biD2XkSgh05zOPYKOHVr8fq3hmOEvnahKYwb+gmQQkmx2M3TgDlGMyUCKHdZVWF\nbou7Pcx\/0pdY5QX0vBqTcBtO1GFousaHzgxalgxxDmKlGN+gyaci5Izop6M\/jRx0\nLzvDm5ZuWA2CP3J1\/wIDAQABo1YwVDASBgNVHRMBAf8ECDAGAQH\/AgEAMB0GA1Ud\nDgQWBBSOB4mXtuMx3lDUvncmo7glKYwCqTAfBgNVHSMEGDAWgBTmV9BazOW3jYMB\noVjYRXbNjdg0wjANBgkqhkiG9w0BAQsFAAOCAQEAKIrKm81YtBsSkSMhnzoOr6wj\nEX9aGPwup1N2kvkjZ\/WCARg97MrOxEuvwcKcMlIV4tRds3i1wdcqLwzw2ToAbzcm\nyoPsqheKLmdClR6BWEVl7e2vlnrh4OrWodIY39fECQbby3hd9pNYB2hNnC6yQEb5\nBR4l01zBP6b8zK9PhsfTO107OUDm4iAKhz7MHngKEsS4VonqWDSMyQRX34nmotDG\nI29uO0V8BS5Cxj3X2PDkWpoQfaIQrjxKQ7MHV53QGUDIrS19htUYlqjHKuDkE7yK\niAX9rg4HOlj\/RYYkpyYiO6SdLmCI6bSVwDzu2X2bGnqe9HmyfuRVti6BE\/7gfQ==\n-----END CERTIFICATE-----\n",
                     "-----BEGIN CERTIFICATE-----\nMIIDzjCCAragAwIBAgICAUIwDQYJKoZIhvcNAQELBQAwdTELMAkGA1UEBhMCVVMx\nEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxEzAR\nBgNVBAoMCkdvb2dsZSBJbmMxDTALBgNVBAsMBENhc3QxFTATBgNVBAMMDENhc3Qg\nUm9vdCBDQTAeFw0xODA1MjMxOTE2NThaFw0zODA1MTgxOTE2NThaMH0xCzAJBgNV\nBAYTAlVTMRMwEQYDVQQIDApXYXNoaW5ndG9uMREwDwYDVQQHDAhLaXJrbGFuZDET\nMBEGA1UECgwKR29vZ2xlIEluYzERMA8GA1UECwwIV2lkZXZpbmUxHjAcBgNVBAMM\nFVdpZGV2aW5lIENhc3QgU3Vicm9vdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC\nAQoCggEBAKeLRw+xkq1QzU3FrQ+Gjzd7NigVWwkDgQTfFCJNHxNWSxwzgjYXi05J\nHf\/vGC23VOs6+90Wekw86BuUCPfA1\/0t3DlYu0p6YXC96W2bBziPD3RFNrQXjBlR\nL\/86CQW1iDYR9sXsjw8ds1pCsI8ssp7tunGagWjZFI3L7APJEqHBTAMXYl\/ne03\/\nLkUqmd6Hlt68cdrj5VZe1SRZ3lFFREE033tvOJoDcsh+55QSvZrANziFOJM\/IoxT\nQ4Q8ONO1CvdHA1HSiUttf7JHCF2WON\/Qh9MzKlNSyZuZ0IN3\/g29nmKjIZzLurX2\nXP78UvH\/9jEVyMpOrNyLPoQBzB75408CAwEAAaNgMF4wDwYDVR0TBAgwBgEB\/wIB\nATAdBgNVHQ4EFgQU5lfQWszlt42DAaFY2EV2zY3YNMIwHwYDVR0jBBgwFoAUfJoe\nfd95VLzXzF7KmYZFeWV0KBkwCwYDVR0PBAQDAgEGMA0GCSqGSIb3DQEBCwUAA4IB\nAQAfEXtJ3Tqf\/N1wxnjfQW9K0ZyzR3jpE7dIR\/VGjhGL1VM8fDiNN5EBBYigxdzM\n8vkDvC1zA5r8MRS2dZ29N2+dbyAkbAxiVLLl448AnOajhH4KzwSyZmGDWSxLdibt\n+bJO32zvJYQWVYe6VBdUAENGL0mcAv9xVPigU6v7hbFQd0+m5TnZbZdBDqPwYWeO\n0IdzSdnuK64VQufaR8ZCzYzqn77vA6EouvXj1ZJDFWmrnBDKm30a8xH6Xh33I74L\ntUG7eeVWmdiGa\/RT0qsEL8kSWcSjz7djpsUXckjx8113jGZicu+P+OOEFAA24q4Z\noC5eaAagY66Q3CE7LViCbTWi\n-----END CERTIFICATE-----\n"
                 ],
-                "nonce": "sGI+uEDcZFdnumYi",
-                "signed_data": "S7yJtDnESVByAOstcdlc4pXUwg6VivuwsMsq7TgYpkCMGJ3vq0mkoDPUo8VyR9VsB9iIEC3w4tc54lMyPdbBDqeOCXXTQqF4T6Fcu8DaAwYSVoOCoH7FV9\/SgLLpJjuw+6LElSborue+EvUzaVoNyK+yZ51XiYGM0LVaMal6HF6CMKQrL9to1LDh8KXi+sv4cuRuxCRJuJFLRFJGPCZqedLRajIjrY9JfAQm3+2NONq\/kmljx2kYnBrb++xUnAgiZwIk\/AhPSiFlR8BIls7v3ial8TqQo+HX\/6O\/QmphLdz31antS20HsW\/E9jL8laWU7cmXi32w9Di0Jjm3U5en+g=="
+                "nonce": "lKBwnz4uSCqPIuum",
+                "signed_data": "M1ZxuK+dNRhNWgd3TU4vb6UeOzrvLRMbf8vRaIifkltuuoRebaSFjG2snLzAWs8F17nRe0GJ+gmivFewpUIK9WSuIdZSFkUZ7yV8+17Ujlk7Wq\/ICUpROuDLUg7YcFTCS5xL47r+yU\/0X8lMW8cRaOxObi\/BJW1bINKf7ZILqjfO1ier8DWUtmDXuD5zCpJ+PdHl3YXsxMaeJQVL299ARIycLkC9VmYi3SFNFXdlwcZq\/ScPPVYxtgXVU+Qebj+ub4anbGT1gO1tFNF7pk\/9WUuyh9hwpbKFTKNJEbx7Ofep\/tqTVQHlTf2z5Lybqp1ZlcAakTHwAi9larUn1RLVoQ=="
             },
             "version": 12,
             "wifi": {

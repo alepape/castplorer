@@ -10528,3 +10528,232 @@ osxver
 2022-08-21T11:02:19+00:00 - save config to file
 2022-08-21T11:02:19+00:00 - all done
 2022-08-21T11:02:19+00:00 - ------------------------------------------------------------
+2022-08-21T12:39:32+00:00 - check local config
+2022-08-21T12:39:32+00:00 - local config decoded
+2022-08-21T12:39:32+00:00 - chromecast scan started
+2022-08-21T12:39:38+00:00 - chromecast scan done - 0 results
+2022-08-21T12:39:38+00:00 - details check for Ines Mini started
+2022-08-21T12:39:38+00:00 - details check for Ines Mini done
+2022-08-21T12:39:38+00:00 - details check for Kitchen Display started
+2022-08-21T12:39:38+00:00 - details check for Kitchen Display done
+2022-08-21T12:39:38+00:00 - details check for Master bedroom TV started
+2022-08-21T12:39:38+00:00 - details check for Master bedroom TV done
+2022-08-21T12:39:38+00:00 - details check for Max Mini started
+2022-08-21T12:39:38+00:00 - details check for Max Mini done
+2022-08-21T12:39:38+00:00 - details check for Old Speakers started
+2022-08-21T12:39:39+00:00 - details check for Old Speakers done
+2022-08-21T12:39:39+00:00 - details check for Polk started
+2022-08-21T12:39:39+00:00 - lite check for Polk started
+2022-08-21T12:39:39+00:00 - lite check for Polk done
+2022-08-21T12:39:39+00:00 - details check for Polk done
+2022-08-21T12:39:39+00:00 - details check for Shelf speaker started
+2022-08-21T12:39:42+00:00 - lite check for Shelf speaker started
+2022-08-21T12:39:45+00:00 - lite check for Shelf speaker done
+2022-08-21T12:39:45+00:00 - details check for Shelf speaker done
+2022-08-21T12:39:45+00:00 - details check for Study mini started
+2022-08-21T12:39:48+00:00 - lite check for Study mini started
+2022-08-21T12:39:51+00:00 - lite check for Study mini done
+2022-08-21T12:39:51+00:00 - details check for Study mini done
+2022-08-21T12:39:51+00:00 - details check for Study speaker started
+2022-08-21T12:39:54+00:00 - lite check for Study speaker started
+2022-08-21T12:39:57+00:00 - lite check for Study speaker done
+2022-08-21T12:39:57+00:00 - details check for Study speaker done
+2022-08-21T12:39:57+00:00 - details check for TV Speakers started
+2022-08-21T12:39:57+00:00 - details check for TV Speakers done
+2022-08-21T12:39:57+00:00 - details check for Vodafone TV started
+2022-08-21T12:39:57+00:00 - details check for Vodafone TV done
+2022-08-21T12:39:57+00:00 - clean and sort
+2022-08-21T12:39:57+00:00 - save config to file
+2022-08-21T12:39:57+00:00 - all done
+2022-08-21T12:39:57+00:00 - ------------------------------------------------------------
+2022-08-21T12:40:04+00:00 - check local config
+2022-08-21T12:40:04+00:00 - local config decoded
+2022-08-21T12:40:04+00:00 - chromecast scan started
+2022-08-21T12:40:09+00:00 - chromecast scan done - 0 results
+2022-08-21T12:40:09+00:00 - details check for Ines Mini started
+2022-08-21T12:40:09+00:00 - details check for Ines Mini done
+2022-08-21T12:40:09+00:00 - details check for Kitchen Display started
+2022-08-21T12:40:09+00:00 - details check for Kitchen Display done
+2022-08-21T12:40:09+00:00 - details check for Master bedroom TV started
+2022-08-21T12:40:09+00:00 - details check for Master bedroom TV done
+2022-08-21T12:40:09+00:00 - details check for Max Mini started
+2022-08-21T12:40:10+00:00 - details check for Max Mini done
+2022-08-21T12:40:10+00:00 - details check for Old Speakers started
+2022-08-21T12:40:10+00:00 - details check for Old Speakers done
+2022-08-21T12:40:10+00:00 - details check for Polk started
+2022-08-21T12:40:10+00:00 - lite check for Polk started
+2022-08-21T12:40:10+00:00 - lite check for Polk done
+2022-08-21T12:40:10+00:00 - details check for Polk done
+2022-08-21T12:40:10+00:00 - details check for Shelf speaker started
+2022-08-21T12:40:13+00:00 - lite check for Shelf speaker started
+2022-08-21T12:40:16+00:00 - lite check for Shelf speaker done
+2022-08-21T12:40:16+00:00 - details check for Shelf speaker done
+2022-08-21T12:40:16+00:00 - details check for Study mini started
+2022-08-21T12:40:19+00:00 - lite check for Study mini started
+2022-08-21T12:40:22+00:00 - lite check for Study mini done
+2022-08-21T12:40:22+00:00 - details check for Study mini done
+2022-08-21T12:40:22+00:00 - details check for Study speaker started
+2022-08-21T12:40:25+00:00 - lite check for Study speaker started
+2022-08-21T12:40:28+00:00 - lite check for Study speaker done
+2022-08-21T12:40:28+00:00 - details check for Study speaker done
+2022-08-21T12:40:28+00:00 - details check for TV Speakers started
+2022-08-21T12:40:28+00:00 - details check for TV Speakers done
+2022-08-21T12:40:28+00:00 - details check for Vodafone TV started
+2022-08-21T12:40:29+00:00 - details check for Vodafone TV done
+2022-08-21T12:40:29+00:00 - clean and sort
+2022-08-21T12:40:29+00:00 - save config to file
+2022-08-21T12:40:29+00:00 - all done
+2022-08-21T12:40:29+00:00 - ------------------------------------------------------------
+2022-08-21T12:41:42+00:00 - check local config
+2022-08-21T12:41:42+00:00 - local config decoded
+2022-08-21T12:41:42+00:00 - chromecast scan started
+2022-08-21T12:41:47+00:00 - live: [Master bedroom TV]
+2022-08-21T12:41:47+00:00 - live: [Vodafone TV]
+2022-08-21T12:41:47+00:00 - live: [Polk]
+2022-08-21T12:41:47+00:00 - live: [Kitchen Display]
+2022-08-21T12:41:47+00:00 - live: [Max Mini]
+2022-08-21T12:41:47+00:00 - live: [Ines Mini]
+2022-08-21T12:41:47+00:00 - live: [TV Speakers]
+2022-08-21T12:41:47+00:00 - live: [Old Speakers]
+2022-08-21T12:41:47+00:00 - chromecast scan done - 8 results
+2022-08-21T12:41:47+00:00 - details check for Ines Mini started
+2022-08-21T12:41:47+00:00 - details check for Ines Mini done
+2022-08-21T12:41:47+00:00 - details check for Kitchen Display started
+2022-08-21T12:41:48+00:00 - details check for Kitchen Display done
+2022-08-21T12:41:48+00:00 - details check for Master bedroom TV started
+2022-08-21T12:41:48+00:00 - details check for Master bedroom TV done
+2022-08-21T12:41:48+00:00 - details check for Max Mini started
+2022-08-21T12:41:48+00:00 - details check for Max Mini done
+2022-08-21T12:41:48+00:00 - details check for Old Speakers started
+2022-08-21T12:41:48+00:00 - details check for Old Speakers done
+2022-08-21T12:41:48+00:00 - details check for Polk started
+2022-08-21T12:41:48+00:00 - lite check for Polk started
+2022-08-21T12:41:48+00:00 - lite check for Polk done
+2022-08-21T12:41:48+00:00 - details check for Polk done
+2022-08-21T12:41:48+00:00 - details check for Shelf speaker started
+2022-08-21T12:41:51+00:00 - lite check for Shelf speaker started
+2022-08-21T12:41:54+00:00 - lite check for Shelf speaker done
+2022-08-21T12:41:54+00:00 - details check for Shelf speaker done
+2022-08-21T12:41:54+00:00 - details check for Study mini started
+2022-08-21T12:41:57+00:00 - lite check for Study mini started
+2022-08-21T12:42:00+00:00 - lite check for Study mini done
+2022-08-21T12:42:00+00:00 - details check for Study mini done
+2022-08-21T12:42:00+00:00 - details check for Study speaker started
+2022-08-21T12:42:04+00:00 - lite check for Study speaker started
+2022-08-21T12:42:07+00:00 - lite check for Study speaker done
+2022-08-21T12:42:07+00:00 - details check for Study speaker done
+2022-08-21T12:42:07+00:00 - details check for TV Speakers started
+2022-08-21T12:42:07+00:00 - details check for TV Speakers done
+2022-08-21T12:42:07+00:00 - details check for Vodafone TV started
+2022-08-21T12:42:07+00:00 - details check for Vodafone TV done
+2022-08-21T12:42:07+00:00 - clean and sort
+2022-08-21T12:42:07+00:00 - save config to file
+2022-08-21T12:42:07+00:00 - all done
+2022-08-21T12:42:07+00:00 - ------------------------------------------------------------
+2022-08-21T12:50:28+00:00 - check local config
+2022-08-21T12:50:28+00:00 - local config decoded
+2022-08-21T12:50:28+00:00 - chromecast scan started
+2022-08-21T12:50:29+00:00 - live: [Study mini]
+2022-08-21T12:50:29+00:00 - live: [Study speaker]
+2022-08-21T12:50:29+00:00 - live: [Shelf speaker]
+2022-08-21T12:50:29+00:00 - chromecast scan done - 3 results
+2022-08-21T12:50:29+00:00 - details check for Ines Mini started
+2022-08-21T12:50:29+00:00 - details check for Ines Mini done
+2022-08-21T12:50:29+00:00 - details check for Kitchen Display started
+2022-08-21T12:50:30+00:00 - details check for Kitchen Display done
+2022-08-21T12:50:30+00:00 - details check for Master bedroom TV started
+2022-08-21T12:50:30+00:00 - details check for Master bedroom TV done
+2022-08-21T12:50:30+00:00 - details check for Max Mini started
+2022-08-21T12:50:30+00:00 - details check for Max Mini done
+2022-08-21T12:50:30+00:00 - details check for Old Speakers started
+2022-08-21T12:50:30+00:00 - details check for Old Speakers done
+2022-08-21T12:50:30+00:00 - details check for Polk started
+2022-08-21T12:50:30+00:00 - lite check for Polk started
+2022-08-21T12:50:30+00:00 - lite check for Polk done
+2022-08-21T12:50:30+00:00 - details check for Polk done
+2022-08-21T12:50:30+00:00 - details check for Shelf speaker started
+2022-08-21T12:50:30+00:00 - details check for Shelf speaker done
+2022-08-21T12:50:30+00:00 - details check for Study mini started
+2022-08-21T12:50:30+00:00 - details check for Study mini done
+2022-08-21T12:50:30+00:00 - details check for Study speaker started
+2022-08-21T12:50:30+00:00 - details check for Study speaker done
+2022-08-21T12:50:30+00:00 - details check for TV Speakers started
+2022-08-21T12:50:31+00:00 - details check for TV Speakers done
+2022-08-21T12:50:31+00:00 - details check for Vodafone TV started
+2022-08-21T12:50:31+00:00 - details check for Vodafone TV done
+2022-08-21T12:50:31+00:00 - clean and sort
+2022-08-21T12:50:31+00:00 - save config to file
+2022-08-21T12:50:31+00:00 - all done
+2022-08-21T12:50:31+00:00 - ------------------------------------------------------------
+2022-08-21T12:51:39+00:00 - check local config
+2022-08-21T12:51:39+00:00 - local config decoded
+2022-08-21T12:51:39+00:00 - chromecast scan started
+2022-08-21T12:51:39+00:00 - live: [Shelf speaker]
+2022-08-21T12:51:39+00:00 - live: [Study speaker]
+2022-08-21T12:51:39+00:00 - live: [Study mini]
+2022-08-21T12:51:39+00:00 - chromecast scan done - 3 results
+2022-08-21T12:51:39+00:00 - details check for Ines Mini started
+2022-08-21T12:51:40+00:00 - details check for Ines Mini done
+2022-08-21T12:51:40+00:00 - details check for Kitchen Display started
+2022-08-21T12:51:40+00:00 - details check for Kitchen Display done
+2022-08-21T12:51:40+00:00 - details check for Master bedroom TV started
+2022-08-21T12:51:40+00:00 - details check for Master bedroom TV done
+2022-08-21T12:51:40+00:00 - details check for Max Mini started
+2022-08-21T12:51:40+00:00 - details check for Max Mini done
+2022-08-21T12:51:40+00:00 - details check for Old Speakers started
+2022-08-21T12:51:41+00:00 - details check for Old Speakers done
+2022-08-21T12:51:41+00:00 - details check for Polk started
+2022-08-21T12:51:41+00:00 - lite check for Polk started
+2022-08-21T12:51:41+00:00 - lite check for Polk done
+2022-08-21T12:51:41+00:00 - details check for Polk done
+2022-08-21T12:51:41+00:00 - details check for Shelf speaker started
+2022-08-21T12:51:41+00:00 - details check for Shelf speaker done
+2022-08-21T12:51:41+00:00 - details check for Study mini started
+2022-08-21T12:51:41+00:00 - details check for Study mini done
+2022-08-21T12:51:41+00:00 - details check for Study speaker started
+2022-08-21T12:51:41+00:00 - details check for Study speaker done
+2022-08-21T12:51:41+00:00 - details check for TV Speakers started
+2022-08-21T12:51:44+00:00 - lite check for TV Speakers started
+2022-08-21T12:51:45+00:00 - lite check for TV Speakers done
+2022-08-21T12:51:45+00:00 - details check for TV Speakers done
+2022-08-21T12:51:45+00:00 - details check for Vodafone TV started
+2022-08-21T12:51:45+00:00 - details check for Vodafone TV done
+2022-08-21T12:51:45+00:00 - clean and sort
+2022-08-21T12:51:45+00:00 - save config to file
+2022-08-21T12:51:45+00:00 - all done
+2022-08-21T12:51:45+00:00 - ------------------------------------------------------------
+2022-08-21T12:51:55+00:00 - check local config
+2022-08-21T12:51:55+00:00 - local config decoded
+2022-08-21T12:51:55+00:00 - chromecast scan started
+2022-08-21T12:51:55+00:00 - live: [Study mini]
+2022-08-21T12:51:55+00:00 - live: [Study speaker]
+2022-08-21T12:51:55+00:00 - live: [Shelf speaker]
+2022-08-21T12:51:55+00:00 - chromecast scan done - 3 results
+2022-08-21T12:51:55+00:00 - details check for Ines Mini started
+2022-08-21T12:51:55+00:00 - details check for Ines Mini done
+2022-08-21T12:51:55+00:00 - details check for Kitchen Display started
+2022-08-21T12:51:56+00:00 - details check for Kitchen Display done
+2022-08-21T12:51:56+00:00 - details check for Master bedroom TV started
+2022-08-21T12:51:56+00:00 - details check for Master bedroom TV done
+2022-08-21T12:51:56+00:00 - details check for Max Mini started
+2022-08-21T12:51:56+00:00 - details check for Max Mini done
+2022-08-21T12:51:56+00:00 - details check for Old Speakers started
+2022-08-21T12:51:56+00:00 - details check for Old Speakers done
+2022-08-21T12:51:56+00:00 - details check for Polk started
+2022-08-21T12:51:56+00:00 - lite check for Polk started
+2022-08-21T12:51:56+00:00 - lite check for Polk done
+2022-08-21T12:51:56+00:00 - details check for Polk done
+2022-08-21T12:51:56+00:00 - details check for Shelf speaker started
+2022-08-21T12:51:57+00:00 - details check for Shelf speaker done
+2022-08-21T12:51:57+00:00 - details check for Study mini started
+2022-08-21T12:51:57+00:00 - details check for Study mini done
+2022-08-21T12:51:57+00:00 - details check for Study speaker started
+2022-08-21T12:51:57+00:00 - details check for Study speaker done
+2022-08-21T12:51:57+00:00 - details check for TV Speakers started
+2022-08-21T12:51:57+00:00 - details check for TV Speakers done
+2022-08-21T12:51:57+00:00 - details check for Vodafone TV started
+2022-08-21T12:51:57+00:00 - details check for Vodafone TV done
+2022-08-21T12:51:57+00:00 - clean and sort
+2022-08-21T12:51:57+00:00 - save config to file
+2022-08-21T12:51:57+00:00 - all done
+2022-08-21T12:51:57+00:00 - ------------------------------------------------------------
