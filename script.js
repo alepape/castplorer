@@ -47,11 +47,12 @@ function fillUpTable(json) {
             groupnb = device.status.multizone.groups.length;
             dyngroupnb = device.status.multizone.dynamic_groups.length;
         }
-        var row = $('<tr id="'+key+'">');
+        var row = $('<tr id="'+key+'">'); // TODO: add a header row w/ status data (ex: mDNS responses and time)
         if (device.live) {
             row.addClass("live");
         }
         if ((device.port == 8009)&&(device.status)&&(device.status.device_info)) { // full info available
+            // TODO: add an icon for DOWN
             if (device.status.device_info.model_name == "Google Home Mini") {
                 row.append($(' <td><span class="material-symbols-outlined">nest_mini</span></td>'));
             } else if (device.status.device_info.model_name == "Google Nest Hub") {
@@ -66,14 +67,18 @@ function fillUpTable(json) {
                 }
             }
         } else if ((device.port == 8009)) {
-            // unknown
-            row.append($(' <td><span class="material-symbols-outlined">question_mark</span></td>'));
+            if (device.status) {
+                // unknown
+                row.append($(' <td><span class="material-symbols-outlined">question_mark</span></td>'));
+            } else {
+                // error
+                row.append($(' <td><span class="material-symbols-outlined">signal_disconnected</span></td>'));
+            }
         } else {
             // group
             row.append($(' <td><span class="material-symbols-outlined">speaker_group</span></td>'));
         }
 
-        // TODO: add a delete from cache button
         row.append($(' <td>'+device.friendlyname+'</td>'));
         row.append($(' <td>'+device.ip+'</td>'));
         row.append($(' <td>'+device.port+'</td>'));
@@ -100,9 +105,9 @@ function fillUpTable(json) {
         }
         body.append(row);
         // TODO: add a command row per device (check possible ones)
+        // TODO: add a delete from cache button
         // TODO: add single device refresh
         // TODO: allow manual set of IP address
-        // TODO: add device remove
         const detailRow = $('</tr><tr style="height: 0px"><td class="details collapsed" colspan="8" id="details-'+key+'">loading...</td></tr>');
         body.append(detailRow);
     }

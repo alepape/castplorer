@@ -97,7 +97,7 @@ logMe("local config decoded");
 
 // update config
 logMe("chromecast scan started");
-$castEntities = Chromecast::scan(10000);
+$castEntities = Chromecast::scan(10000); // TODO: add more traces in libraries
 
 foreach($castEntities as $key => $value) {
     if (!strpos($key, "googlecast")) {
