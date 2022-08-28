@@ -106,7 +106,7 @@ function fillUpTable(json) {
             }
             row.append($(' <td>'+device.status.wifi.ssid+wq+'</td>'));
             row.append($(' <td>'+device.status.build_info.cast_build_revision+'</td>'));
-            row.append($(' <td>'+groupnb+'/'+dyngroupnb+'</td>'));
+            row.append($(' <td>'+groupnb+' / '+dyngroupnb+'</td>'));
         } else if ((device.port == 8009)&&(device.status)) {
             row.append($(' <td>'+device.friendlyname+'</td>'));
             var wq = "";
@@ -115,7 +115,7 @@ function fillUpTable(json) {
             }
             row.append($(' <td>'+device.status.ssid+wq+'</td>'));
             row.append($(' <td>'+device.status.cast_build_revision+'</td>'));
-            row.append($(' <td>'+groupnb+'/'+dyngroupnb+'</td>'));
+            row.append($(' <td>'+groupnb+' / '+dyngroupnb+'</td>'));
         } else {
             row.append($(' <td colspan=4></td>'));
         }
