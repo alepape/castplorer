@@ -5,10 +5,12 @@
 
 require_once("Chromecast.php");
 
-// $details = ($_GET["details"] == 1);
-// $update = ($_GET["update"] == 1);
-$details = true;
-$update = true;
+$domain = $_GET["domain"];
+if ($domain == "") {
+    $domain = "_googlecast._tcp.local"; // default domain
+}
+$nosave = ($_GET["nosave"] == 1);
+$live = ($_GET["live"] == 1);
 
 define("LOGPATH",__DIR__ . "/log/log.txt");
 
@@ -88,22 +90,27 @@ function getLiteStatus($ip) {
 // TODO: add a "last seen" timestamp to show in the UI
 // TODO: create a home assistant output mode (YAML?)
 // TODO: add a configuration json to select UI options (which columns, etc.)
-
-logMe("check local config");
-$config = __DIR__ .'/casts.json';
-$json = file_get_contents($config);
-$storedCastEntities = json_decode($json, true);
-logMe("local config decoded");
+if (!$live) {
+    logMe("check local config");
+    $config = __DIR__ .'/casts.json';
+    $json = file_get_contents($config);
+    $storedCastEntities = json_decode($json, true);
+    logMe("local config decoded");
+} else {
+    $json = "";
+    $storedCastEntities = [];
+}
 
 // update config
-logMe("chromecast scan started");
-$castEntities = Chromecast::scan(10000); // TODO: add more traces in libraries
+logMe("chromecast scan started on ".$domain);
+$castEntities = Chromecast::scan(10000, $domain);
 
 foreach($castEntities as $key => $value) {
-    if (!strpos($key, "googlecast")) {
+    if (!strpos($key, $domain)) {
         unset($castEntities[$key]);
+        logMe("removing ".$key);
     } else {
-        logMe("live: [".$value['friendlyname']."]");
+        logMe("live: [".$value['friendlyname']."] - ".$key);
     }
 }
 logMe("chromecast scan done - ".count($castEntities)." results");
@@ -139,18 +146,19 @@ foreach($storedCastEntities as &$entity) {
 logMe("clean and sort");
 uasort($storedCastEntities, "cmp");
 
-// prepare the save file (no groups)
-$saveCastEntities = [];
-foreach($storedCastEntities as $key => &$entity) {
-    if ($entity['port'] == 8009) {
-        $saveCastEntities[$key] = $entity;
+if (!$nosave) {
+    // prepare the save file (no groups)
+    $saveCastEntities = [];
+    foreach($storedCastEntities as $key => &$entity) {
+        if ($entity['port'] == 8009) {
+            $saveCastEntities[$key] = $entity;
+        }
     }
+
+    logMe("save config to file");
+    // save config + display result
+    file_put_contents($config, json_encode($saveCastEntities, JSON_PRETTY_PRINT));
 }
-
-logMe("save config to file");
-
-// save config + display result
-file_put_contents($config, json_encode($saveCastEntities, JSON_PRETTY_PRINT));
 $newJson = json_encode($storedCastEntities);
 
 logMe("all done");

@@ -10,12 +10,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
     <body>
-<table cellspacing='0' id="devices"> <!-- cellspacing='0' is important, must stay -->
+<table cellspacing='0' id="devices"> <!-- cellspacing='0' is important, must stay &#xf0c9; -->
 
 <!-- Table Header -->
 <thead>
     <tr>
-        <th><a onclick="refreshJson();"><i style="font-size:12px" class="fa">&#xf021;</i></a></th>
+        <th><a onclick="config();"><i style="font-size:12px" class="fa">&#xf0c9;</i></a>&nbsp;&nbsp;<a onclick="refreshJson();"><i style="font-size:12px" class="fa" id="refresh">&#xf021;</i></a></th>
         <th>Device</th>
         <th>IP</th>
         <th>Port</th>

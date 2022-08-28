@@ -50,14 +50,14 @@ class Chromecast
 		$this->Plex = new CCPlexPlayer($this);
 	}
 	
-	public static function scan($wait = 15)
+	public static function scan($wait = 15, $domain = "_googlecast._tcp.local")
 	{
 		// Wrapper for scan
-		$result = Chromecast::scansub($wait);
+		$result = Chromecast::scansub($wait, $domain);
 		return $result;
 	}
 	
-	public static function scansub($wait = 15)
+	public static function scansub($wait = 15, $domain = "_googlecast._tcp.local")
 	{
 		// Performs an mdns scan of the network to find chromecasts and returns an array
 		// Let's test by finding Google Chromecasts
@@ -67,15 +67,12 @@ class Chromecast
 		$firstresponsetime = - 1;
 		$lastpackettime = - 1;
 		$starttime = round(microtime(true) * 1000);
-		$mdns->query("_googlezone._tcp.local", 1, 12, "");
-		$mdns->query("_googlecast._tcp.local", 1, 12, "");
-		$mdns->query("_googlecast._tcp", 1, 12, "");
-		$mdns->query("_googlezone._tcp.local", 1, 12, "");
-		$mdns->query("_googlecast._tcp.local", 1, 12, "");
-		$mdns->query("_googlecast._tcp", 1, 12, "");
-		$mdns->query("_googlezone._tcp.local", 1, 12, "");
-		$mdns->query("_googlecast._tcp.local", 1, 12, "");
-		$mdns->query("_googlecast._tcp", 1, 12, "");
+		$mdns->query($domain, 1, 12, "");
+		// $mdns->query($domain, 1, 12, "");
+		// $mdns->query($domain, 1, 12, "");
+		// $mdns->query("_googlezone._tcp.local", 1, 12, "");
+		// $mdns->query("_googlecast._tcp.local", 1, 12, "");
+		// $mdns->query("_googlecast._tcp", 1, 12, "");
 		$cc = $wait;
 		$filetoget = 1;
 		$dontrequery = 0;
@@ -114,7 +111,7 @@ class Chromecast
 				for ($x = 0; $x < sizeof($inpacket->answerrrs); $x++) {
 					if ($inpacket->answerrrs[$x]->qtype == 12) {
 						// print_r($inpacket->answerrrs[$x]);
-						if ($inpacket->answerrrs[$x]->name == "_googlecast._tcp.local") {
+						if ($inpacket->answerrrs[$x]->name == $domain) {
 							if ($firstresponsetime == - 1) {
 								$firstresponsetime = round(microtime(true) * 1000) - $starttime;
 							}
@@ -214,6 +211,8 @@ class Chromecast
 								$cc = $wait;
 							}
 							set_time_limit($wait * 2);
+						} else {
+							logMe("ignoring ".$inpacket->answerrrs[$x]->name." because not in domain ".$domain);
 						}
 					}
 					if ($inpacket->answerrrs[$x]->qtype == 33) {

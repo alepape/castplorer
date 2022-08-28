@@ -64,7 +64,7 @@ class mDNS {
 			$response = socket_read($this->mdnssocket, 1024, PHP_BINARY_READ);
 		} catch (Exception $e) {
 		}
-                if (strlen($response) < 1) { return ""; }
+        if (strlen($response) < 1) { return ""; }
 		// Create an array to represent the bytes
 		$bytes = array();
 		for ($x = 0; $x < strlen($response); $x++) {
@@ -83,38 +83,38 @@ class mDNS {
 	
 	public function printPacket($p) {
 		// Echo a summary of packet contents to the screen
-		echo "Questions: " . $p->packetheader->getQuestions() . "\n";
+		logMe("Questions: " . $p->packetheader->getQuestions());
 		if ($p->packetheader->getQuestions() > 0) {
 			// List the AnswerRRs
 			for ($x=0; $x < $p->packetheader->getQuestions(); $x++) {
-				echo "  Question Number: " . $x . "\n";
+				logMe("  Question Number: " . $x);
 				$a = $p->questions[$x];
 				$this->printRR($a);
 			}
 		}
-		echo "AnswerRRs: " . $p->packetheader->getAnswerRRs() . "\n";
+		logMe("AnswerRRs: " . $p->packetheader->getAnswerRRs());
 		if ($p->packetheader->getAnswerRRs() > 0) {
 			// List the AnswerRRs
 			for ($x=0; $x < $p->packetheader->getAnswerRRs(); $x++) {
-				echo "  Answer Number: " . $x . "\n";
+				logMe("  Answer Number: " . $x);
 				$a = $p->answerrrs[$x];
 				$this->printRR($a);
 			}
 		}
-		echo "AuthorityRRs: " . $p->packetheader->getAuthorityRRs() . "\n";
+		logMe("AuthorityRRs: " . $p->packetheader->getAuthorityRRs());
 		if ($p->packetheader->getAuthorityRRs() > 0) {
 			// List the AnswerRRs
 			for ($x=0; $x < $p->packetheader->getAuthorityRRs(); $x++) {
-				echo "  AuthorityRR Number: " . $x . "\n";
+				logMe("  AuthorityRR Number: " . $x);
 				$a = $p->authorityrrs[$x];
 				$this->printRR($a);
 			}
 		}
-		echo "AdditionalRRs: " . $p->packetheader->getAdditionalRRs() . "\n";	
+		logMe("AdditionalRRs: " . $p->packetheader->getAdditionalRRs());	
 		if ($p->packetheader->getAdditionalRRs() > 0) {
 			// List the AnswerRRs
 			for ($x=0; $x < $p->packetheader->getAdditionalRRs(); $x++) {
-				echo "  Answer Number: " . $x . "\n";
+				logMe("  Answer Number: " . $x);
 				$a = $p->additionalrrs[$x];
 				$this->printRR($a);
 			}
@@ -122,15 +122,15 @@ class mDNS {
 	}
 	
 	private function printRR($a) {
-		echo "    Name: " . $a->name . "\n";
-		echo "    QType: " . $a->qtype . "\n";
-		echo "    QClass: " . $a->qclass . "\n";
-		echo "    TTL: " . $a->ttl . "\n";
+		logMe("    Name: " . $a->name);
+		logMe("    QType: " . $a->qtype);
+		logMe("    QClass: " . $a->qclass);
+		logMe("    TTL: " . $a->ttl);
 		$s = "";
 		for ($x=0; $x < sizeof($a->data); $x++) {
 			$s .= chr($a->data[$x]);
 		}
-		echo "    Data: " . $s . "\n";	
+		logMe("    Data: " . $s);	
 	}
 	
 }

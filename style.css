@@ -122,6 +122,23 @@ td.details.collapsed {
 	display: none;
 }
 
+td.control.collapsed {
+	display: none;
+}
+
+td.control {
+	text-align: left;
+	padding: 8px;
+    padding-left: 8px !important;
+}
+
+td.control button {
+    float: right;
+    margin-right: 8px;
+	font-size: 9px;
+	color: rgb(102,102,102);
+}
+
 th > a > i {
 	cursor: pointer;
 }

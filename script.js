@@ -7,18 +7,29 @@ function setTableClick() {
         const device = jsonsrc[$(this)[0].id];
         //console.log("device clicked:",device);
         if (!device) return; // click in details
+        // details
         var sel = '#details-'+$(this)[0].id;
         sel = sel.replaceAll(".", "\\.");
+        // controls
+        var ctrl = '#control-'+$(this)[0].id;
+        ctrl = ctrl.replaceAll(".", "\\.");
+
         if (!$(sel).hasClass("collapsed")) { // close
             $(sel).addClass("collapsed");
+            $(ctrl).addClass("collapsed");
             return;
         }
-        formatter = new JSONFormatter(device);
+
         $('td.details').addClass("collapsed");
+        $('td.control').addClass("collapsed");
+
+        formatter = new JSONFormatter(device);
         document.querySelector(sel).innerHTML = "";
         document.querySelector(sel).appendChild(formatter.render());
         formatter.openAtDepth(2);
+
         $(sel).removeClass("collapsed");
+        $(ctrl).removeClass("collapsed");
     });
 }
 
@@ -27,7 +38,7 @@ function fillUpTable(json) {
     $('#devices').empty();
 
     var header = $('<thead><tr></tr></thead>');
-    header.append($('<th><a onclick="refreshJson();"><i style="font-size:12px" class="fa">&#xf021;</i></a></th>')); // TODO: add a loading state
+    header.append($('<th><a onclick="config();"><i style="font-size:12px" class="fa">&#xf0c9;</i></a>&nbsp;&nbsp;<a onclick="refreshJson();"><i style="font-size:12px" class="fa" id="refresh">&#xf021;</i></a></th>')); 
     header.append($('<th>Device</th>'));
     header.append($('<th>IP</th>'));
     header.append($('<th>Port</th>'));
@@ -52,7 +63,6 @@ function fillUpTable(json) {
             row.addClass("live");
         }
         if ((device.port == 8009)&&(device.status)&&(device.status.device_info)) { // full info available
-            // TODO: add an icon for DOWN
             if (device.status.device_info.model_name == "Google Home Mini") {
                 row.append($(' <td><span class="material-symbols-outlined">nest_mini</span></td>'));
             } else if (device.status.device_info.model_name == "Google Nest Hub") {
@@ -104,10 +114,9 @@ function fillUpTable(json) {
             row.append($(' <td colspan=4></td>'));
         }
         body.append(row);
-        // TODO: add a command row per device (check possible ones)
-        // TODO: add a delete from cache button
-        // TODO: add single device refresh
-        // TODO: allow manual set of IP address
+
+        const controlRow = $('</tr><tr style="height: 0px"><td class="control collapsed" colspan="8" id="control-'+key+'">'+generateCtrl(key)+'</td></tr>');
+        body.append(controlRow);
         const detailRow = $('</tr><tr style="height: 0px"><td class="details collapsed" colspan="8" id="details-'+key+'">loading...</td></tr>');
         body.append(detailRow);
     }
@@ -116,7 +125,7 @@ function fillUpTable(json) {
 }
 
 function refreshJson() {
-    $('i.fa').addClass("fa-spin");
+    $('#refresh').addClass("fa-spin");
     var settings = {
         "url": "update.php",
         "method": "GET",
@@ -129,6 +138,29 @@ function refreshJson() {
         setTableClick();
         $('i.fa').removeClass("fa-spin");
       });
+}
+
+function config() {
+    // TODO: show config row to capture / propose domain options
+    // TODO: will need to remove domain dependency from json storage (keys use domain and shouldn't!)
+}
+
+function generateCtrl(key) {
+    // TODO: add a delete from cache button
+    // TODO: add single device refresh
+    // TODO: allow manual set of IP address
+    html = key+'&nbsp;<button onclick="refreshSingle(\''+key+'\')" type="button">refresh me</button>&nbsp;<button onclick="deleteDevice(\''+key+'\')" type="button">delete me</button>&nbsp;<button onclick="changeIP(\''+key+'\')" type="button">change IP</button>';
+    return html;
+}
+
+function refreshSingle(key) {
+    console.log("refreshSingle "+key);
+}
+function deleteDevice(key) {
+    console.log("deleteDevice "+key);
+}
+function changeIP(key) {
+    console.log("changeIP "+key);
 }
 
 $('document').ready(function() {
