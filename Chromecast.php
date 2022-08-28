@@ -60,6 +60,7 @@ class Chromecast
 	public static function scansub($wait = 15, $domain = "_googlecast._tcp.local")
 	{
 		// Performs an mdns scan of the network to find chromecasts and returns an array
+		logMe("scan on ".$domain." for ".$wait."ms");
 		// Let's test by finding Google Chromecasts
 		$mdns = new mDNS();
 		// Search for chromecast devices
@@ -111,7 +112,7 @@ class Chromecast
 				for ($x = 0; $x < sizeof($inpacket->answerrrs); $x++) {
 					if ($inpacket->answerrrs[$x]->qtype == 12) {
 						// print_r($inpacket->answerrrs[$x]);
-						if ($inpacket->answerrrs[$x]->name == $domain) {
+						if ($inpacket->answerrrs[$x]->name == $domain) { // TODO: use a lighter comparison (in, not ==)
 							if ($firstresponsetime == - 1) {
 								$firstresponsetime = round(microtime(true) * 1000) - $starttime;
 							}

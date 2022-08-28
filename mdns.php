@@ -29,6 +29,7 @@ class mDNS {
 	}
 	
 	public function query($name, $qclass, $qtype, $data="") {
+		logMe("mdns query: ".$name);
 		// Sends a query
 		$p = new DNSPacket;
 		$p->clear();
@@ -45,14 +46,14 @@ class mDNS {
 		for ($x = 0; $x < sizeof($b); $x++) { 
 			$data .= chr($b[$x]);
 		}
-                $this->querycache = $data;
+        $this->querycache = $data;
 		$r = socket_sendto($this->mdnssocket, $data, strlen($data), 0, '224.0.0.251',5353);	
 	}
         
-        public function requery() {
-            // resend the last query
-            $r = socket_sendto($this->mdnssocket, $this->querycache, strlen($this->querycache), 0, '224.0.0.251',5353);
-        }
+	public function requery() {
+		// resend the last query
+		$r = socket_sendto($this->mdnssocket, $this->querycache, strlen($this->querycache), 0, '224.0.0.251',5353);
+	}
 	
 	public function readIncoming() {
 		// Read some incoming data. Timeout after 1 second
@@ -63,6 +64,7 @@ class mDNS {
 		try {
 			$response = socket_read($this->mdnssocket, 1024, PHP_BINARY_READ);
 		} catch (Exception $e) {
+			logMe("exception in incoming");
 		}
         if (strlen($response) < 1) { return ""; }
 		// Create an array to represent the bytes
