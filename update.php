@@ -108,7 +108,7 @@ if (!$live) {
 
 // update config
 logMe("chromecast scan started on ".$domain);
-$castEntities = Chromecast::scan(10000, $domain); // TODO: wait in config (like domain)
+$castEntities = Chromecast::scan($wait, $domain); 
 
 foreach($castEntities as $key => $value) {
     if (!strpos($key, $domain)) {

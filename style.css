@@ -139,6 +139,28 @@ td.control button {
 	color: rgb(102,102,102);
 }
 
+th.config.collapsed {
+	display: none;
+}
+
+th.config input {
+    margin-right: 5px;
+	margin-left: 5px;
+	font-size: 9px;
+	color: rgb(102,102,102);
+}
+
+th.config input[type="checkbox"] {
+	vertical-align: sub;
+}
+
+th.config button {
+    float: right;
+    margin-right: 8px;
+	font-size: 9px;
+	color: rgb(102,102,102);
+}
+
 th > a > i {
 	cursor: pointer;
 }

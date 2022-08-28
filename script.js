@@ -1,5 +1,9 @@
 var jsonsrc = "";
 var formatter;
+var nosave = true;
+var liveonly = true;
+var wait = 3;
+var domain = "_googlecast._tcp.local";
 
 function setTableClick() {
     $('#devices').off('click');
@@ -37,7 +41,9 @@ function fillUpTable(json) {
     console.log(json);
     $('#devices').empty();
 
-    var header = $('<thead><tr></tr></thead>');
+    var config = $('<thead><tr><th class="config collapsed" colspan="8" id="config">'+generateConfig()+'</th></tr></thead>');
+
+    var header = $('<thead></thead>');
     header.append($('<th><a onclick="config();"><i style="font-size:12px" class="fa">&#xf0c9;</i></a>&nbsp;&nbsp;<a onclick="refreshJson();"><i style="font-size:12px" class="fa" id="refresh">&#xf021;</i></a></th>')); 
     header.append($('<th>Device</th>'));
     header.append($('<th>IP</th>'));
@@ -120,14 +126,22 @@ function fillUpTable(json) {
         const detailRow = $('</tr><tr style="height: 0px"><td class="details collapsed" colspan="8" id="details-'+key+'">loading...</td></tr>');
         body.append(detailRow);
     }
+    $('#devices').append(config);
     $('#devices').append(header);
     $('#devices').append(body);
 }
 
 function refreshJson() {
     $('#refresh').addClass("fa-spin");
+    var url = "update.php?domain="+domain+"&wait="+wait;
+    if (nosave) {
+        url += "&nosave=1";
+    }
+    if (liveonly) {
+        url += "&live=1";
+    }
     var settings = {
-        "url": "update.php",
+        "url": url,
         "method": "GET",
         "timeout": 0,
       };
@@ -143,6 +157,7 @@ function refreshJson() {
 function config() {
     // TODO: show config row to capture / propose domain options
     // TODO: will need to remove domain dependency from json storage (keys use domain and shouldn't!)
+    $('th.config').removeClass("collapsed");
 }
 
 function generateCtrl(key) {
@@ -153,14 +168,38 @@ function generateCtrl(key) {
     return html;
 }
 
+function generateConfig() {
+    html = 'CONFIG:&nbsp;&nbsp;&nbsp;';
+    html += 'domain <input id="config_domain" type="text" value="'+domain+'"/>&nbsp;';
+    html += 'wait <input id="config_wait" type="text" maxlength="4" size="4" value="'+wait+'"/>&nbsp;';
+    html += 'live only <input id="config_liveonly" type="checkbox" '+(liveonly ? 'checked' : '')+'/>&nbsp;';
+    html += 'do not save <input id="config_nosave" type="checkbox" '+(nosave ? 'checked' : '')+'/>';
+    html += '<button onclick="saveConfig();" type="button">save</button>'
+    return html;
+}
+
 function refreshSingle(key) {
     console.log("refreshSingle "+key);
 }
+
 function deleteDevice(key) {
     console.log("deleteDevice "+key);
 }
+
 function changeIP(key) {
     console.log("changeIP "+key);
+}
+
+function saveConfig() {
+    $('th.config').addClass("collapsed");
+    domain = $('#config_domain').val();
+    console.log("domain = "+domain);
+    wait = $('#config_wait').val();
+    console.log("wait = "+wait);
+    nosave = $('#config_nosave').is(":checked");
+    console.log("nosave = "+nosave);
+    liveonly = $('#config_liveonly').is(":checked");
+    console.log("live = "+liveonly);
 }
 
 $('document').ready(function() {
