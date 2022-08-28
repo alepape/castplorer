@@ -80,27 +80,32 @@ class Chromecast
 		set_time_limit($wait * 2);
 		$chromecasts = array();
 		while ($cc > 0) {
+			//logMe("within time limit... ".$cc);
 			$inpacket = "";
 			while ($inpacket == "") {
+				//logMe("reading incoming...");
 				$inpacket = $mdns->readIncoming();
 				if ($inpacket <> "") {
 					if ($inpacket->packetheader->getQuestions() > 0) {
 						$inpacket = "";
 					}
 				}
-				if ($lastpackettime <> - 1) {
-					// If we get to here then we have a valid last packet time
-					$timesincelastpacket = round(microtime(true) * 1000) - $lastpackettime;
-					if ($timesincelastpacket > ($firstresponsetime * 5) && $firstresponsetime != - 1) {
-						return $chromecasts;
-					}
-				}
-				if ($inpacket <> "") {
-					$lastpackettime = round(microtime(true) * 1000);
-				}
+				// if ($lastpackettime <> - 1) {
+				// 	// If we get to here then we have a valid last packet time
+				// 	$timesincelastpacket = round(microtime(true) * 1000) - $lastpackettime; 
+				// 	if ($timesincelastpacket > ($firstresponsetime * 15) && $firstresponsetime != - 1) {
+				// 		logMe("timesincelastpacket = ".$timesincelastpacket);
+				// 		logMe("firstresponsetime = ".$firstresponsetime);
+				// 		//return $chromecasts;
+				// 	}
+				// }
+				// if ($inpacket <> "") {
+				// 	$lastpackettime = round(microtime(true) * 1000);
+				// }
 				$timetohere = round(microtime(true) * 1000) - $starttime;
 				// Maximum five second rule
-				if ($timetohere > 5000) {
+				if ($timetohere > $wait) { // the REAL wait time
+					logMe("timetohere = ".$timetohere);
 					return $chromecasts;
 				}
 			}
@@ -109,6 +114,7 @@ class Chromecast
 			if ($inpacket->packetheader->getAnswerRRs() > 0) {
 				$dontrequery = 0;
 				// $mdns->printPacket($inpacket);
+				// logMe("getAnswerRRs size: ".sizeof($inpacket->answerrrs));
 				for ($x = 0; $x < sizeof($inpacket->answerrrs); $x++) {
 					if ($inpacket->answerrrs[$x]->qtype == 12) {
 						// print_r($inpacket->answerrrs[$x]);
@@ -288,6 +294,7 @@ class Chromecast
 			}
 			$cc--;
 		}
+		logMe("I'm done cc=".$cc);
 		return $chromecasts;
 	}
 	

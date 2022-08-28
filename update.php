@@ -11,6 +11,11 @@ if ($domain == "") {
 }
 $nosave = ($_GET["nosave"] == 1);
 $live = ($_GET["live"] == 1);
+$wait = $_GET["wait"];
+if ($wait == "") {
+    $wait = 10; // 10 sec default timeout
+}
+$wait = $wait*1000;
 
 define("LOGPATH",__DIR__ . "/log/log.txt");
 
@@ -103,7 +108,7 @@ if (!$live) {
 
 // update config
 logMe("chromecast scan started on ".$domain);
-$castEntities = Chromecast::scan(10000, $domain);
+$castEntities = Chromecast::scan(10000, $domain); // TODO: wait in config (like domain)
 
 foreach($castEntities as $key => $value) {
     if (!strpos($key, $domain)) {
