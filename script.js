@@ -64,7 +64,7 @@ function fillUpTable(json) {
             groupnb = device.status.multizone.groups.length;
             dyngroupnb = device.status.multizone.dynamic_groups.length;
         }
-        var row = $('<tr id="'+key+'">'); // TODO: add a header row w/ status data (ex: mDNS responses and time)
+        var row = $('<tr id="'+key+'">');
         if (device.live) {
             row.addClass("live");
         }
@@ -155,8 +155,6 @@ function refreshJson() {
 }
 
 function config() {
-    // TODO: show config row to capture / propose domain options
-    // TODO: will need to remove domain dependency from json storage (keys use domain and shouldn't!)
     $('th.config').removeClass("collapsed");
 }
 
@@ -173,7 +171,7 @@ function generateConfig() {
     html += 'domain <input id="config_domain" type="text" value="'+domain+'"/>&nbsp;';
     html += 'wait <input id="config_wait" type="text" maxlength="4" size="4" value="'+wait+'"/>&nbsp;';
     html += 'live only <input id="config_liveonly" type="checkbox" '+(liveonly ? 'checked' : '')+'/>&nbsp;';
-    html += 'do not save <input id="config_nosave" type="checkbox" '+(nosave ? 'checked' : '')+'/>';
+    html += 'do not save to cache <input id="config_nosave" type="checkbox" '+(nosave ? 'checked' : '')+'/>';
     html += '<button onclick="saveConfig();" type="button">save</button>'
     return html;
 }
