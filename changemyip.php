@@ -16,7 +16,6 @@ if ($wait == "") {
     $wait = 10; // 10 sec default timeout
 }
 $wait = $wait*1000;
-$single = $_GET["single"]; // ignores live (need the config to get the ip from the ID) and wait and domain
 
 define("LOGPATH",__DIR__ . "/log/log.txt");
 
@@ -94,23 +93,10 @@ function getLiteStatus($ip) {
     return $response;
 }
 
-function fillInStatus(&$entity) {
-    logMe("details check for ".$entity['friendlyname']." started");
-    $entity['status'] = json_decode(getSingleStatus($entity['ip']), true);
-    if ($entity['status'] == NULL) {
-        logMe("lite check for ".$entity['friendlyname']." started");
-        $liteJson = getLiteStatus($entity['ip']);
-        //echo $liteJson;
-        $entity['status'] = json_decode($liteJson, true);
-        logMe("lite check for ".$entity['friendlyname']." done");
-    }
-    logMe("details check for ".$entity['friendlyname']." done");
-}
-
 // TODO: add a "last seen" timestamp to show in the UI
 // TODO: create a home assistant output mode (YAML?)
 // TODO: add a configuration json to select UI options (which columns, etc.)
-if (!$live || ($single != "")) {
+if (!$live) {
     logMe("check local config");
     $config = __DIR__ .'/casts.json';
     $json = file_get_contents($config);
@@ -121,51 +107,50 @@ if (!$live || ($single != "")) {
     $storedCastEntities = [];
 }
 
-if ($single == "") {
-    // scan 
-    logMe("chromecast scan started on ".$domain);
-    $castEntities = Chromecast::scan($wait, $domain); 
+// update config
+logMe("chromecast scan started on ".$domain);
+$castEntities = Chromecast::scan($wait, $domain); 
 
-    foreach($castEntities as $key => $value) {
-        if (!strpos($key, $domain)) {
-            unset($castEntities[$key]);
-            logMe("removing ".$key);
-        } else {
-            logMe("live: [".$value['friendlyname']."] - ".$key);
-        }
-    }
-    logMe("chromecast scan done - ".count($castEntities)." results");
-
-    if (($json == "") || ($json == NULL)) {
-        $storedCastEntities = $castEntities;
+foreach($castEntities as $key => $value) {
+    if (!strpos($key, $domain)) {
+        unset($castEntities[$key]);
+        logMe("removing ".$key);
     } else {
-        $storedCastEntities = array_merge($storedCastEntities, $castEntities);
-    }
-    foreach($storedCastEntities as $key => &$value) {
-        $value['live'] = array_key_exists($key, $castEntities);
-    }
-    // fill in status
-    foreach($storedCastEntities as &$entity) {
-        if ($entity['port'] == 8009) {
-            fillInStatus($entity);
-        } else {
-            $entity['status'] = array();
-        }
-    }
-
-    logMe("clean and sort");
-    uasort($storedCastEntities, "cmp");
-} else { // single mode - scanning skipped
-    logMe("chromecast scan skipped - single mode for ".$single);
-    $singleEntity = $storedCastEntities[$single];
-    if (!isset($singleEntity)) {
-        $newJson = "";
-        logMe("no cast found based on single ID");
-    } else {
-        fillInStatus($storedCastEntities[$single]);
-        $newJson = json_encode($singleEntity);
+        logMe("live: [".$value['friendlyname']."] - ".$key);
     }
 }
+logMe("chromecast scan done - ".count($castEntities)." results");
+
+if (($json == "") || ($json == NULL)) {
+    $storedCastEntities = $castEntities;
+} else {
+    $storedCastEntities = array_merge($storedCastEntities, $castEntities);
+}
+
+foreach($storedCastEntities as $key => &$value) {
+    $value['live'] = array_key_exists($key, $castEntities);
+}
+
+// fill in status
+foreach($storedCastEntities as &$entity) {
+    if ($entity['port'] == 8009) {
+        logMe("details check for ".$entity['friendlyname']." started");
+        $entity['status'] = json_decode(getSingleStatus($entity['ip']), true);
+        if ($entity['status'] == NULL) {
+            logMe("lite check for ".$entity['friendlyname']." started");
+            $liteJson = getLiteStatus($entity['ip']);
+            //echo $liteJson;
+            $entity['status'] = json_decode($liteJson, true);
+            logMe("lite check for ".$entity['friendlyname']." done");
+        }
+        logMe("details check for ".$entity['friendlyname']." done");
+    } else {
+        $entity['status'] = array();
+    }
+}
+
+logMe("clean and sort");
+uasort($storedCastEntities, "cmp");
 
 if (!$nosave) {
     // prepare the save file (no groups)
@@ -180,12 +165,7 @@ if (!$nosave) {
     // save config + display result
     file_put_contents($config, json_encode($saveCastEntities, JSON_PRETTY_PRINT));
 }
-
-if ($single == "") {
-    $newJson = json_encode($storedCastEntities);
-} else {
-    // use newJson from single mode above
-}
+$newJson = json_encode($storedCastEntities);
 
 logMe("all done");
 logMe("------------------------------------------------------------");
