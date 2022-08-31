@@ -1,4 +1,5 @@
 var jsonsrc = "";
+var singlejsonsrc = "";
 var formatter;
 var nosave = true;
 var liveonly = true;
@@ -9,7 +10,7 @@ function setTableClick() {
     $('#devices').off('click');
     $('#devices').on('click', 'tr', function () {
         const device = jsonsrc[$(this)[0].id];
-        //console.log("device clicked:",device);
+        console.log("device clicked:",device);
         if (!device) return; // click in details
         // details
         var sel = '#details-'+$(this)[0].id;
@@ -37,8 +38,72 @@ function setTableClick() {
     });
 }
 
+function generateRowContent(row, device) {
+    var groupnb = 0;
+    var dyngroupnb = 0;
+    if (device.status && device.status.multizone) {
+        groupnb = device.status.multizone.groups.length;
+        dyngroupnb = device.status.multizone.dynamic_groups.length;
+    }
+    if (device.live) {
+        row.addClass("live");
+    }
+    if ((device.port == 8009)&&(device.status)&&(device.status.device_info)) { // full info available
+        if (device.status.device_info.model_name == "Google Home Mini") {
+            row.append($(' <td><span class="material-symbols-outlined">nest_mini</span></td>'));
+        } else if (device.status.device_info.model_name == "Google Nest Hub") {
+            row.append($(' <td><span class="material-symbols-outlined">nest_display</span></td>'));
+        } else if (device.status.device_info.model_name == "Chromecast Audio") {
+            row.append($(' <td><span class="material-symbols-outlined">speaker</span></td>'));
+        } else {
+            if (device.status.device_info.capabilities.display_supported) {
+                row.append($(' <td><span class="material-symbols-outlined">tv_with_assistant</span></td>'));
+            } else {
+                row.append($(' <td><span class="material-symbols-outlined">home_speaker</span></td>'));
+            }
+        }
+    } else if ((device.port == 8009)) {
+        if (device.status) {
+            // unknown
+            row.append($(' <td><span class="material-symbols-outlined">question_mark</span></td>'));
+        } else {
+            // error
+            row.append($(' <td><span class="material-symbols-outlined">signal_disconnected</span></td>'));
+        }
+    } else {
+        // group
+        row.append($(' <td><span class="material-symbols-outlined">speaker_group</span></td>'));
+    }
+
+    row.append($(' <td>'+device.friendlyname+'</td>'));
+    row.append($(' <td>'+device.ip+'</td>'));
+    row.append($(' <td>'+device.port+'</td>'));
+    if ((device.port == 8009)&&(device.status)&&(device.status.device_info)) {
+        row.append($(' <td>'+device.status.device_info.model_name+'</td>'));
+        var wq = "";
+        if (device.status.wifi.signal_level && device.status.wifi.noise_level) {
+            wq = " ("+device.status.wifi.signal_level+"/"+device.status.wifi.noise_level+")";
+        }
+        row.append($(' <td>'+device.status.wifi.ssid+wq+'</td>'));
+        row.append($(' <td>'+device.status.build_info.cast_build_revision+'</td>'));
+        row.append($(' <td>'+groupnb+' / '+dyngroupnb+'</td>'));
+    } else if ((device.port == 8009)&&(device.status)) {
+        row.append($(' <td>'+device.friendlyname+'</td>'));
+        var wq = "";
+        if (device.status.signal_level && device.status.noise_level) {
+            wq = " ("+device.status.signal_level+"/"+device.status.noise_level+")";
+        }
+        row.append($(' <td>'+device.status.ssid+wq+'</td>'));
+        row.append($(' <td>'+device.status.cast_build_revision+'</td>'));
+        row.append($(' <td>'+groupnb+' / '+dyngroupnb+'</td>'));
+    } else {
+        row.append($(' <td colspan=4></td>'));
+    }
+    return row;
+}
+
 function fillUpTable(json) {
-    console.log(json);
+    //console.log(json);
     $('#devices').empty();
 
     var config = $('<thead><tr><th class="config collapsed" colspan="8" id="config">'+generateConfig()+'</th></tr></thead>');
@@ -58,67 +123,9 @@ function fillUpTable(json) {
     for (let index = 0; index < deviceIDs.length; index++) {
         const key = deviceIDs[index];
         const device = json[key];
-        var groupnb = 0;
-        var dyngroupnb = 0;
-        if (device.status && device.status.multizone) {
-            groupnb = device.status.multizone.groups.length;
-            dyngroupnb = device.status.multizone.dynamic_groups.length;
-        }
         var row = $('<tr id="'+key+'">');
-        if (device.live) {
-            row.addClass("live");
-        }
-        if ((device.port == 8009)&&(device.status)&&(device.status.device_info)) { // full info available
-            if (device.status.device_info.model_name == "Google Home Mini") {
-                row.append($(' <td><span class="material-symbols-outlined">nest_mini</span></td>'));
-            } else if (device.status.device_info.model_name == "Google Nest Hub") {
-                row.append($(' <td><span class="material-symbols-outlined">nest_display</span></td>'));
-            } else if (device.status.device_info.model_name == "Chromecast Audio") {
-                row.append($(' <td><span class="material-symbols-outlined">speaker</span></td>'));
-            } else {
-                if (device.status.device_info.capabilities.display_supported) {
-                    row.append($(' <td><span class="material-symbols-outlined">tv_with_assistant</span></td>'));
-                } else {
-                    row.append($(' <td><span class="material-symbols-outlined">home_speaker</span></td>'));
-                }
-            }
-        } else if ((device.port == 8009)) {
-            if (device.status) {
-                // unknown
-                row.append($(' <td><span class="material-symbols-outlined">question_mark</span></td>'));
-            } else {
-                // error
-                row.append($(' <td><span class="material-symbols-outlined">signal_disconnected</span></td>'));
-            }
-        } else {
-            // group
-            row.append($(' <td><span class="material-symbols-outlined">speaker_group</span></td>'));
-        }
 
-        row.append($(' <td>'+device.friendlyname+'</td>'));
-        row.append($(' <td>'+device.ip+'</td>'));
-        row.append($(' <td>'+device.port+'</td>'));
-        if ((device.port == 8009)&&(device.status)&&(device.status.device_info)) {
-            row.append($(' <td>'+device.status.device_info.model_name+'</td>'));
-            var wq = "";
-            if (device.status.wifi.signal_level && device.status.wifi.noise_level) {
-                wq = " ("+device.status.wifi.signal_level+"/"+device.status.wifi.noise_level+")";
-            }
-            row.append($(' <td>'+device.status.wifi.ssid+wq+'</td>'));
-            row.append($(' <td>'+device.status.build_info.cast_build_revision+'</td>'));
-            row.append($(' <td>'+groupnb+' / '+dyngroupnb+'</td>'));
-        } else if ((device.port == 8009)&&(device.status)) {
-            row.append($(' <td>'+device.friendlyname+'</td>'));
-            var wq = "";
-            if (device.status.signal_level && device.status.noise_level) {
-                wq = " ("+device.status.signal_level+"/"+device.status.noise_level+")";
-            }
-            row.append($(' <td>'+device.status.ssid+wq+'</td>'));
-            row.append($(' <td>'+device.status.cast_build_revision+'</td>'));
-            row.append($(' <td>'+groupnb+' / '+dyngroupnb+'</td>'));
-        } else {
-            row.append($(' <td colspan=4></td>'));
-        }
+        row = generateRowContent(row, device);
         body.append(row);
 
         const controlRow = $('</tr><tr style="height: 0px"><td class="control collapsed" colspan="8" id="control-'+key+'">'+generateCtrl(key)+'</td></tr>');
@@ -129,6 +136,18 @@ function fillUpTable(json) {
     $('#devices').append(config);
     $('#devices').append(header);
     $('#devices').append(body);
+}
+
+function updateUpTable(singleJson, key) {
+    jsonsrc[key] = singleJson;
+    rowsel = "#"+key;
+    rowsel = rowsel.replaceAll(".", "\\.");
+    //console.log("rowsel = ["+rowsel+"]");
+    row = $(rowsel);
+    //console.log("target row:",row);
+    row.empty();
+    generateRowContent(row, singleJson);
+    setTableClick();
 }
 
 function refreshJson() {
@@ -144,14 +163,14 @@ function refreshJson() {
         "url": url,
         "method": "GET",
         "timeout": 0,
-      };
-      
-      $.ajax(settings).done(function (response) {
-        jsonsrc = response;
-        fillUpTable(response);
-        setTableClick();
-        $('i.fa').removeClass("fa-spin");
-      });
+    };
+    
+    $.ajax(settings).done(function (response) {
+    jsonsrc = response;
+    fillUpTable(response);
+    setTableClick();
+    $('i.fa').removeClass("fa-spin");
+    });
 }
 
 function config() {
@@ -178,6 +197,24 @@ function generateConfig() {
 
 function refreshSingle(key) {
     console.log("refreshSingle "+key);
+    $('#refresh').addClass("fa-spin");
+
+    var url = "update.php?single="+key;
+    if (nosave) {
+        url += "&nosave=1";
+    }
+    var settings = {
+        "context": key,
+        "url": url,
+        "method": "GET",
+        "timeout": 0,
+    };
+    
+    $.ajax(settings).done(function (response) {
+        //jsonsrc = response;
+        updateUpTable(response, this);
+        $('i.fa').removeClass("fa-spin");
+    });
 }
 
 function deleteDevice(key) {

@@ -115,6 +115,9 @@ if (!$live || ($single != "")) {
     $config = __DIR__ .'/casts.json';
     $json = file_get_contents($config);
     $storedCastEntities = json_decode($json, true);
+    foreach($storedCastEntities as &$entity) {
+        if (isset($entity['live'])) {unset($entity['live']);}
+    }
     logMe("local config decoded");
 } else {
     $json = "";
@@ -157,13 +160,13 @@ if ($single == "") {
     uasort($storedCastEntities, "cmp");
 } else { // single mode - scanning skipped
     logMe("chromecast scan skipped - single mode for ".$single);
-    $singleEntity = $storedCastEntities[$single];
-    if (!isset($singleEntity)) {
+    //$singleEntity = $storedCastEntities[$single];
+    if (!isset($storedCastEntities[$single])) {
         $newJson = "";
         logMe("no cast found based on single ID");
     } else {
         fillInStatus($storedCastEntities[$single]);
-        $newJson = json_encode($singleEntity);
+        $newJson = json_encode($storedCastEntities[$single]);
     }
 }
 
