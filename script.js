@@ -170,7 +170,11 @@ function refreshJson() {
 }
 
 function config() {
-    $('th.config').removeClass("collapsed");
+    if ($('th.config').hasClass("collapsed")) {
+        $('th.config').removeClass("collapsed");
+    } else {
+        $('th.config').removeClass("collapsed");
+    }
 }
 
 function generateCtrl(key) {
