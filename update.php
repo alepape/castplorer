@@ -6,18 +6,7 @@
 require_once("Chromecast.php");
 require_once("common.php");
 
-$domain = $_GET["domain"];
-if ($domain == "") {
-    $domain = "_googlecast._tcp.local"; // default domain
-}
-$nosave = ($_GET["nosave"] == 1);
-$live = ($_GET["live"] == 1);
-$wait = $_GET["wait"];
-if ($wait == "") {
-    $wait = 10; // 10 sec default timeout
-}
-$wait = $wait*1000;
-$single = $_GET["single"]; // ignores live (need the config to get the ip from the ID) and wait and domain
+// FUNCTIONS
 
 function cmp($a, $b) {
     $portdiff = $a['port'] - $b['port'];
@@ -100,18 +89,42 @@ function fillInStatus(&$entity) {
     logMe("details check for ".$entity['friendlyname']." done");
 }
 
+// LOGIC
+
+$domain = $_GET["domain"];
+if ($domain == "") {
+    $domain = "_googlecast._tcp.local"; // default domain
+}
+$nosave = ($_GET["nosave"] == 1);
+$live = ($_GET["live"] == 1);
+$wait = $_GET["wait"];
+if ($wait == "") {
+    $wait = 10; // 10 sec default timeout
+}
+$wait = $wait*1000;
+$single = $_GET["single"]; // ignores live (need the cache to get the ip from the ID) and wait and domain
+
+// Save configuration
+$config = __DIR__ .'/config.json';
+$configdata = [];
+$configdata['domain'] = $domain;
+$configdata['nosave'] = $nosave;
+$configdata['live'] = $live;
+$configdata['wait'] = $wait;
+file_put_contents($config, json_encode($configdata, JSON_PRETTY_PRINT)); // TODO: have a permission check for config and cast jsons...
+
 // TODO: add a "last seen" timestamp to show in the UI
 // TODO: create a home assistant output mode (YAML?)
 // TODO: add a configuration json to select UI options (which columns, etc.)
 if (!$live || ($single != "")) {
-    logMe("check local config");
-    $config = __DIR__ .'/casts.json';
-    $json = file_get_contents($config);
+    logMe("check local cache");
+    $cache = __DIR__ .'/casts.json';
+    $json = file_get_contents($cache);
     $storedCastEntities = json_decode($json, true);
     foreach($storedCastEntities as &$entity) {
         if (isset($entity['live'])) {unset($entity['live']);}
     }
-    logMe("local config decoded");
+    logMe("local cache decoded");
 } else {
     $json = "";
     $storedCastEntities = [];
@@ -172,9 +185,9 @@ if (!$nosave) {
         }
     }
 
-    logMe("save config to file");
-    // save config + display result
-    file_put_contents($config, json_encode($saveCastEntities, JSON_PRETTY_PRINT));
+    logMe("save cache to file");
+    // save cache + display result
+    file_put_contents($cache, json_encode($saveCastEntities, JSON_PRETTY_PRINT));
 }
 
 if ($single == "") {

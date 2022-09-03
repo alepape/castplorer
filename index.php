@@ -1,3 +1,8 @@
+<?php
+    $configfile = __DIR__ .'/config.json';
+    $configjson = file_get_contents($configfile);
+    $configdata = json_decode($configjson, true);
+?>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +13,12 @@
         <link rel="stylesheet" href="json-formatter-js/json-formatter.css"></link>
         <script type="text/javascript" src="script.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script type="text/javascript">
+            var nosave = <?=$configdata['nosave']?>;
+            var liveonly = <?=$configdata['live']?>;
+            var wait = <?=$configdata['wait']?> / 1000;
+            var domain = "<?=$configdata['domain']?>";
+        </script>
     </head>
     <body>
 <table cellspacing='0' id="devices"> <!-- cellspacing='0' is important, must stay &#xf0c9; -->

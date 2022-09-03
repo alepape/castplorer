@@ -1,10 +1,6 @@
 var jsonsrc = "";
 var singlejsonsrc = "";
 var formatter;
-var nosave = true;
-var liveonly = true;
-var wait = 3;
-var domain = "_googlecast._tcp.local";
 
 function setTableClick() {
     $('#devices').off('click');
@@ -188,7 +184,7 @@ function generateCtrl(key) {
 }
 
 function generateConfig() {
-    html = 'CONFIG:&nbsp;&nbsp;&nbsp;';
+    html = '&nbsp;';
     html += 'domain <input id="config_domain" type="text" value="'+domain+'"/>&nbsp;';
     html += 'wait <input id="config_wait" type="text" maxlength="4" size="4" value="'+wait+'"/>&nbsp;';
     html += 'live only <input id="config_liveonly" type="checkbox" '+(liveonly ? 'checked' : '')+'/>&nbsp;';
@@ -269,6 +265,7 @@ function saveConfig() {
     console.log("nosave = "+nosave);
     liveonly = $('#config_liveonly').is(":checked");
     console.log("live = "+liveonly);
+    refreshJson();
 }
 
 $('document').ready(function() {
