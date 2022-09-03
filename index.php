@@ -14,8 +14,8 @@
         <script type="text/javascript" src="script.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <script type="text/javascript">
-            var nosave = <?=$configdata['nosave']?>;
-            var liveonly = <?=$configdata['live']?>;
+            var nosave = <?=($configdata['nosave'])?1:0?>; // ($user['permissions'] == 'admin') ? true : false;
+            var liveonly = <?=($configdata['live'])?1:0?>;
             var wait = <?=$configdata['wait']?> / 1000;
             var domain = "<?=$configdata['domain']?>";
         </script>
