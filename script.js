@@ -173,7 +173,7 @@ function config() {
     if ($('th.config').hasClass("collapsed")) {
         $('th.config').removeClass("collapsed");
     } else {
-        $('th.config').removeClass("collapsed");
+        $('th.config').addClass("collapsed");
     }
 }
 
