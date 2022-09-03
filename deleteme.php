@@ -2,172 +2,37 @@
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
+require_once("common.php");
 
-require_once("Chromecast.php");
+logMe("delete from cache");
 
-$domain = $_GET["domain"];
-if ($domain == "") {
-    $domain = "_googlecast._tcp.local"; // default domain
-}
-$nosave = ($_GET["nosave"] == 1);
-$live = ($_GET["live"] == 1);
-$wait = $_GET["wait"];
-if ($wait == "") {
-    $wait = 10; // 10 sec default timeout
-}
-$wait = $wait*1000;
+$key = $_GET["key"]; // exit if empty
 
-define("LOGPATH",__DIR__ . "/log/log.txt");
+if ($key != "") {
 
-function logMe($txt){
-    $datetime = new DateTime();
-	file_put_contents(LOGPATH, $datetime->format(DateTime::ATOM)." - ".$txt."\n", FILE_APPEND);
-} // TODO: have several levels of logs
-// TODO: expose logs in the UI
-
-function cmp($a, $b) {
-    $portdiff = $a['port'] - $b['port'];
-    if ($portdiff == 0) {
-        return strcmp($a['friendlyname'], $b['friendlyname']);
-    } else {
-        return $portdiff;
-    }
-}
-
-function getStatus($entities) {
-    $statuses = array();
-    foreach ($entities as $node) {
-        $status = getSingleStatus($node['ip']);
-        $statuses[] = $status;
-    }
-    return $statuses;
-}
-
-function getSingleStatus($ip) {
-    $curl = curl_init();
-
-    $url = 'https://'.$ip.':8443/setup/eureka_info?params=version,audio,name,build_info,detail,device_info,net,wifi,setup,settings,opt_in,opencast,multizone,proxy,night_mode_params,user_eq,room_equalizer,sign,aogh,ultrasound,mesh';
-    //echo $url;
-
-    curl_setopt_array($curl, array(
-        CURLOPT_URL => $url,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 3,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'GET',
-        CURLOPT_SSL_VERIFYHOST => 0,
-        CURLOPT_SSL_VERIFYPEER => 0
-    ));
-
-    $response = curl_exec($curl);
-
-    curl_close($curl);
-    return $response;
-}
-
-function getLiteStatus($ip) {
-    $curllite = curl_init();
-
-    $url = 'http://'.$ip.':8008/setup/eureka_info';
-    //echo $url;
-
-    curl_setopt_array($curllite, array(
-        CURLOPT_URL => $url,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => '',
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 3,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => 'GET',
-        CURLOPT_SSL_VERIFYHOST => 0,
-        CURLOPT_SSL_VERIFYPEER => 0
-    ));
-
-    $response = curl_exec($curllite);
-
-    curl_close($curllite);
-    return $response;
-}
-
-// TODO: add a "last seen" timestamp to show in the UI
-// TODO: create a home assistant output mode (YAML?)
-// TODO: add a configuration json to select UI options (which columns, etc.)
-if (!$live) {
     logMe("check local config");
     $config = __DIR__ .'/casts.json';
     $json = file_get_contents($config);
     $storedCastEntities = json_decode($json, true);
     logMe("local config decoded");
-} else {
-    $json = "";
-    $storedCastEntities = [];
-}
-
-// update config
-logMe("chromecast scan started on ".$domain);
-$castEntities = Chromecast::scan($wait, $domain); 
-
-foreach($castEntities as $key => $value) {
-    if (!strpos($key, $domain)) {
-        unset($castEntities[$key]);
-        logMe("removing ".$key);
-    } else {
-        logMe("live: [".$value['friendlyname']."] - ".$key);
-    }
-}
-logMe("chromecast scan done - ".count($castEntities)." results");
-
-if (($json == "") || ($json == NULL)) {
-    $storedCastEntities = $castEntities;
-} else {
-    $storedCastEntities = array_merge($storedCastEntities, $castEntities);
-}
-
-foreach($storedCastEntities as $key => &$value) {
-    $value['live'] = array_key_exists($key, $castEntities);
-}
-
-// fill in status
-foreach($storedCastEntities as &$entity) {
-    if ($entity['port'] == 8009) {
-        logMe("details check for ".$entity['friendlyname']." started");
-        $entity['status'] = json_decode(getSingleStatus($entity['ip']), true);
-        if ($entity['status'] == NULL) {
-            logMe("lite check for ".$entity['friendlyname']." started");
-            $liteJson = getLiteStatus($entity['ip']);
-            //echo $liteJson;
-            $entity['status'] = json_decode($liteJson, true);
-            logMe("lite check for ".$entity['friendlyname']." done");
-        }
-        logMe("details check for ".$entity['friendlyname']." done");
-    } else {
-        $entity['status'] = array();
-    }
-}
-
-logMe("clean and sort");
-uasort($storedCastEntities, "cmp");
-
-if (!$nosave) {
-    // prepare the save file (no groups)
-    $saveCastEntities = [];
-    foreach($storedCastEntities as $key => &$entity) {
-        if ($entity['port'] == 8009) {
-            $saveCastEntities[$key] = $entity;
-        }
-    }
+    
+    // looking for my key
+    logMe("removing ".$storedCastEntities[$key]['friendlyname']." from cache...");
+    //logMe(json_encode($storedCastEntities[$key], JSON_PRETTY_PRINT));
+    unset($storedCastEntities[$key]);
 
     logMe("save config to file");
     // save config + display result
-    file_put_contents($config, json_encode($saveCastEntities, JSON_PRETTY_PRINT));
-}
-$newJson = json_encode($storedCastEntities);
+    file_put_contents($config, json_encode($storedCastEntities, JSON_PRETTY_PRINT));
 
-logMe("all done");
+    $newJson = '{"status": "ok"}';    
+    logMe("all done");
+    
+} else {
+    logMe("missing arguments");
+    $newJson = '{"status": "ko", "error": "missing argument"}';
+}
+
 logMe("------------------------------------------------------------");
 header('Content-Type: application/json; charset=utf-8');
 echo $newJson;

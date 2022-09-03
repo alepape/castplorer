@@ -178,10 +178,12 @@ function config() {
 }
 
 function generateCtrl(key) {
-    // TODO: add a delete from cache button
-    // TODO: add single device refresh
-    // TODO: allow manual set of IP address
-    html = key+'&nbsp;<button onclick="refreshSingle(\''+key+'\')" type="button">refresh me</button>&nbsp;<button onclick="deleteDevice(\''+key+'\')" type="button">delete me</button>&nbsp;<button onclick="changeIP(\''+key+'\')" type="button">change IP</button>';
+    html = key;
+    if (jsonsrc[key].port == 8009) {
+        html += '&nbsp;<button onclick="refreshSingle(\''+key+'\')" type="button" title="refresh device info"><span class="material-symbols-outlined">refresh</span></button>';
+        html += '&nbsp;<button onclick="deleteDevice(\''+key+'\')" type="button" title="delete device from cache"><span class="material-symbols-outlined">delete</span></button>';
+        html += '&nbsp;<button onclick="changeIP(\''+key+'\')" type="button" title="change device IP address in cache"><span class="material-symbols-outlined">settings_ethernet</span></button>';
+    }
     return html;
 }
 
@@ -219,10 +221,42 @@ function refreshSingle(key) {
 
 function deleteDevice(key) {
     console.log("deleteDevice "+key);
+    $('#refresh').addClass("fa-spin");
+
+    var url = "deleteme.php?key="+key;
+    var settings = {
+        "context": key,
+        "url": url,
+        "method": "GET",
+        "timeout": 0,
+    };
+    
+    $.ajax(settings).done(function (response) {
+        //jsonsrc = response;
+        refreshJson();
+        //$('i.fa').removeClass("fa-spin");
+    });
 }
 
 function changeIP(key) {
     console.log("changeIP "+key);
+    newIP = prompt("Enter new IP address", jsonsrc[key].ip);
+    //console.log(newIP);
+    $('#refresh').addClass("fa-spin");
+
+    var url = "changemyip.php?key="+key+"&ip="+newIP;
+    var settings = {
+        "context": key,
+        "url": url,
+        "method": "GET",
+        "timeout": 0,
+    };
+    
+    $.ajax(settings).done(function (response) {
+        //jsonsrc = response;
+        refreshSingle(this);
+        //$('i.fa').removeClass("fa-spin");
+    });
 }
 
 function saveConfig() {
