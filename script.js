@@ -84,7 +84,11 @@ function generateRowContent(row, device) {
         row.append($(' <td>'+device.status.build_info.cast_build_revision+'</td>'));
         row.append($(' <td>'+groupnb+' / '+dyngroupnb+'</td>'));
     } else if ((device.port == 8009)&&(device.status)) {
-        row.append($(' <td>'+device.friendlyname+'</td>'));
+        if (device.type) {
+            row.append($(' <td>'+device.type+'</td>'));
+        } else {
+            row.append($(' <td>'+device.friendlyname+'</td>'));
+        }
         var wq = "";
         if (device.status.signal_level && device.status.noise_level) {
             wq = " ("+device.status.signal_level+"/"+device.status.noise_level+")";

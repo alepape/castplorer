@@ -84,9 +84,26 @@ function fillInStatus(&$entity) {
         $liteJson = getLiteStatus($entity['ip']);
         //echo $liteJson;
         $entity['status'] = json_decode($liteJson, true);
+        //clean up name and type for AirServer
+        $extractedType = get_string_between($entity['friendlyname'], "md=", "nf=");
+        if ($extractedType != "") {
+            $entity['type'] = $extractedType;
+        }
+        if (isset($entity['status']['name']) && ($entity['friendlyname'] != $entity['status']['name'])) {
+            $entity['friendlyname'] = $entity['status']['name'];
+        }
         logMe("lite check for ".$entity['friendlyname']." done");
     }
     logMe("details check for ".$entity['friendlyname']." done");
+}
+
+function get_string_between($string, $start, $end){
+    $string = ' ' . $string;
+    $ini = strpos($string, $start);
+    if ($ini == 0) return '';
+    $ini += strlen($start);
+    $len = strpos($string, $end, $ini) - $ini;
+    return substr($string, $ini, $len);
 }
 
 // LOGIC
@@ -115,6 +132,7 @@ file_put_contents($config, json_encode($configdata, JSON_PRETTY_PRINT)); // TODO
 
 // TODO: add a "last seen" timestamp to show in the UI
 // TODO: create a home assistant output mode (YAML?)
+// TODO: create a "check" mode which compares live to cache and gives a ok/ko output
 // TODO: add a configuration json to select UI options (which columns, etc.)
 if (!$live || ($single != "")) {
     logMe("check local cache");
@@ -134,13 +152,25 @@ if ($single == "") {
     // scan 
     logMe("chromecast scan started on ".$domain);
     $castEntities = Chromecast::scan($wait, $domain); 
+    // TODO: deal w/ AirServer entries (ex: C02FM1JBQ05N (602)#id=263c8132f2065d05e6c15e7cee9e14c3md=Chromecast Ultranf=1rm=rs	)
+
+    // cleaning bad keys (mainly spaces)
+    foreach($castEntities as $key => $value) {
+        $goodkey = str_replace(" ", "_", $key);
+        $goodkey = str_replace("(", "_", $goodkey);
+        $goodkey = str_replace(")", "_", $goodkey);
+        if ($goodkey != $key) {
+            unset($castEntities[$key]);
+        }
+        $castEntities[$goodkey] = $value;
+    }
 
     foreach($castEntities as $key => $value) {
         if (!strpos($key, $domain)) {
             unset($castEntities[$key]);
             logMe("removing ".$key);
         } else {
-            logMe("live: [".$value['friendlyname']."] - ".$key);
+            logMe("live: [".$value['friendlyname']."] - ".$key); // TODO: clean up friendly names and types (see above)
         }
     }
     logMe("chromecast scan done - ".count($castEntities)." results");
