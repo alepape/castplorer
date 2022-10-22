@@ -4,6 +4,8 @@ Web-based GoogleCast devices explorer and monitor.
 
 Based on https://github.com/ChrisRidings/CastV2inPHP for the MDNS bit.
 
+Uses https://github.com/mohsen1/json-formatter-js for detailed output of device status.
+
 ## How it works
 
 - Step 1: uses mdns discovery to find Google Cast devices on your network
