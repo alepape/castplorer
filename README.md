@@ -16,3 +16,17 @@ Uses https://github.com/mohsen1/json-formatter-js for detailed output of device 
 ## How to use it
 
 clone the repo and use your favourite PHP web server to host
+
+## Features
+
+List of devices
+
+![List of devices](./img/castplorer1.png)
+
+Details for a single device
+
+![Details for a single device](./img/castplorer2.png)
+
+Settings
+
+![Settings](./img/castplorer3.png)
