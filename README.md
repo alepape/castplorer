@@ -30,3 +30,7 @@ Details for a single device
 Settings
 
 ![Settings](./img/castplorer3.png)
+
+## Notes
+
+- designed to be embedded in an iFrame (in Home Assistant for instance) - that's why the UI is so compact
