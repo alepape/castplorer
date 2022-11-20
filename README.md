@@ -11,7 +11,7 @@ Uses https://github.com/mohsen1/json-formatter-js for detailed output of device 
 - Step 1: uses mdns discovery to find Google Cast devices on your network
 - Step 2: queries each device discovery URL to get its status
   - using https://\<IP\>:8443/setup/eureka_info
-  - if it fails (as some device do) or times out, using the less rich output from http://\<IP\>:8008/setup/eureka_info
+  - if it fails (as some devices do) or times out, using the less rich output from http://\<IP\>:8008/setup/eureka_info
 - Step 3: ???
 - Step 4: profit... I mean, shows a nice web UI with the result
 
