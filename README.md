@@ -37,3 +37,10 @@ Settings
 
 - designed to be embedded in an iFrame (in Home Assistant for instance) - that's why the UI is so compact
 - obviously, the server hosting the page needs to be on the same network as the GoogleCast devices
+
+## Prometheus mode
+
+- use /metrics.php
+- available KPIs
+  - overall number of answers in <wait>
+  - response time for each (on lite api)

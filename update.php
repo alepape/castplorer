@@ -122,13 +122,13 @@ $wait = $wait*1000;
 $single = $_GET["single"]; // ignores live (need the cache to get the ip from the ID) and wait and domain
 
 // Save configuration
-$config = __DIR__ .'/config.json';
-$configdata = [];
-$configdata['domain'] = $domain;
-$configdata['nosave'] = $nosave;
-$configdata['live'] = $live;
-$configdata['wait'] = $wait;
-file_put_contents($config, json_encode($configdata, JSON_PRETTY_PRINT)); // TODO: have a permission check for config and cast jsons...
+// $config = __DIR__ .'/config.json';
+// $configdata = [];
+// $configdata['domain'] = $domain;
+// $configdata['nosave'] = $nosave;
+// $configdata['live'] = $live;
+// $configdata['wait'] = $wait;
+// file_put_contents($config, json_encode($configdata, JSON_PRETTY_PRINT)); // TODO: have a permission check for config and cast jsons...
 
 // TODO: add a "last seen" timestamp to show in the UI
 // TODO: create a home assistant output mode (YAML?)

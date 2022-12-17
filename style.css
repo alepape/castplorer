@@ -24,11 +24,9 @@ table {
 	width: 100%;
 	/* max-width: 400px; */
 	/* display: contents; */
-
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
-
 	-moz-box-shadow: 0 1px 2px #d1d1d1;
 	-webkit-box-shadow: 0 1px 2px #d1d1d1;
 	box-shadow: 0 1px 2px #d1d1d1;
@@ -193,4 +191,26 @@ body {
 
 td.control button span {
     font-size: 10px;
+}
+
+a.tooltip {
+    position: relative;
+}
+
+a.tooltip:hover::after {
+    content: attr(data-title);
+    background-color: #edededd1;
+    color: #bd5a36;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    white-space: nowrap;
+    z-index: 1;
+    text-shadow: none;
 }

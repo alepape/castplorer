@@ -19,27 +19,13 @@
             var wait = <?=$configdata['wait']?> / 1000;
             var domain = "<?=$configdata['domain']?>";
             $('document').ready(function() {
-                refreshJson();
+                fillUpConfigTable();
             });
         </script>
     </head>
     <body>
 <table cellspacing='0' id="devices"> <!-- cellspacing='0' is important, must stay &#xf0c9; -->
 
-<!-- Table Header -->
-<thead>
-    <tr>
-        <th><a class="tooltip" onclick="config();" data-title="Edit the configuration"><i style="font-size:12px" class="fa">&#xf013;</i></a>&nbsp;&nbsp;<a class="tooltip" onclick="refreshJson();" data-title="Refresh all devices"><i style="font-size:12px" class="fa" id="refresh">&#xf021;</i></a></th>
-        <th>Device</th>
-        <th>IP</th>
-        <th>Port</th>
-        <th>Type</th>
-        <th>WiFi</th>
-        <th>Version</th>
-        <th>Groups #</th>
-    </tr>
-</thead>
-<!-- Table Header -->
 
 </table>
 

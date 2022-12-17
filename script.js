@@ -102,14 +102,20 @@ function generateRowContent(row, device) {
     return row;
 }
 
+function fillUpConfigTable() {
+    $('#devices').empty();
+    var config = $('<thead><tr><th class="config" colspan="8" id="config">'+generateConfig()+'</th></tr></thead>');
+    $('#devices').append(config);
+}
+
 function fillUpTable(json) {
     //console.log(json);
     $('#devices').empty();
 
-    var config = $('<thead><tr><th class="config collapsed" colspan="8" id="config">'+generateConfig()+'</th></tr></thead>');
+    //var config = $('<thead><tr><th class="config collapsed" colspan="8" id="config">'+generateConfig()+'</th></tr></thead>');
 
     var header = $('<thead></thead>');
-    header.append($('<th><a onclick="config();"><i style="font-size:12px" class="fa">&#xf0c9;</i></a>&nbsp;&nbsp;<a onclick="refreshJson();"><i style="font-size:12px" class="fa" id="refresh">&#xf021;</i></a></th>')); 
+    header.append($('<th><a class="tooltip" onclick="config();" data-title="Edit the configuration"><i style="font-size:12px" class="fa">&#xf013;</i></a>&nbsp;&nbsp;<a class="tooltip" onclick="refreshJson();" data-title="Refresh all devices"><i style="font-size:12px" class="fa" id="refresh">&#xf021;</i></a></th>')); 
     header.append($('<th>Device</th>'));
     header.append($('<th>IP</th>'));
     header.append($('<th>Port</th>'));
@@ -133,7 +139,7 @@ function fillUpTable(json) {
         const detailRow = $('</tr><tr style="height: 0px"><td class="details collapsed" colspan="8" id="details-'+key+'">loading...</td></tr>');
         body.append(detailRow);
     }
-    $('#devices').append(config);
+    //$('#devices').append(config);
     $('#devices').append(header);
     $('#devices').append(body);
 }
@@ -150,15 +156,20 @@ function updateUpTable(singleJson, key) {
     setTableClick();
 }
 
-function refreshJson() {
-    $('#refresh').addClass("fa-spin");
-    var url = "update.php?domain="+domain+"&wait="+wait;
+function generateUrlParams() {
+    var params = "domain="+domain+"&wait="+wait;
     if (nosave) {
-        url += "&nosave=1";
+        params += "&nosave=1";
     }
     if (liveonly) {
-        url += "&live=1";
+        params += "&live=1";
     }
+    return params;
+}
+
+function refreshJson() {
+    $('#refresh').addClass("fa-spin");
+    var url = "update.php?" + generateUrlParams();
     var settings = {
         "url": url,
         "method": "GET",
@@ -166,19 +177,20 @@ function refreshJson() {
     };
     
     $.ajax(settings).done(function (response) {
-    jsonsrc = response;
-    fillUpTable(response);
-    setTableClick();
-    $('i.fa').removeClass("fa-spin");
+        jsonsrc = response;
+        fillUpTable(response);
+        setTableClick();
+        $('i.fa').removeClass("fa-spin");
     });
 }
 
 function config() {
-    if ($('th.config').hasClass("collapsed")) {
-        $('th.config').removeClass("collapsed");
-    } else {
-        $('th.config').addClass("collapsed");
-    }
+    document.location = "config.php";
+    // if ($('th.config').hasClass("collapsed")) {
+    //     $('th.config').removeClass("collapsed");
+    // } else {
+    //     $('th.config').addClass("collapsed");
+    // }
 }
 
 function generateCtrl(key) {
@@ -263,8 +275,8 @@ function changeIP(key) {
     });
 }
 
-function saveConfig() {
-    $('th.config').addClass("collapsed");
+function saveConfig() { // TODO: update me for full page config
+    //$('th.config').addClass("collapsed");
     domain = $('#config_domain').val();
     console.log("domain = "+domain);
     wait = $('#config_wait').val();
@@ -273,9 +285,19 @@ function saveConfig() {
     console.log("nosave = "+nosave);
     liveonly = $('#config_liveonly').is(":checked");
     console.log("live = "+liveonly);
-    refreshJson();
+    saveConfigToFile();    
 }
 
-$('document').ready(function() {
-    refreshJson();
-});
+function saveConfigToFile() {
+    var url = "saveconfig.php?" + generateUrlParams();
+    var settings = {
+        "url": url,
+        "method": "GET",
+        "timeout": 0,
+    };
+    
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        document.location = ".";
+    });
+}
