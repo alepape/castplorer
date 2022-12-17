@@ -110,8 +110,19 @@ if ($wait == "") {
 }
 $wait = $wait*1000;
 
-$json = "";
-$storedCastEntities = [];
+if (!$live) {
+    logMe("check local cache");
+    $cache = __DIR__ .'/casts.json';
+    $json = file_get_contents($cache);
+    $storedCastEntities = json_decode($json, true);
+    foreach($storedCastEntities as &$entity) {
+        if (isset($entity['live'])) {unset($entity['live']);}
+    }
+    logMe("local cache decoded");
+} else {
+    $json = "";
+    $storedCastEntities = [];
+}
 
 // scan 
 logMe("chromecast scan started on ".$domain);
