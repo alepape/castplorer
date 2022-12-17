@@ -1,7 +1,9 @@
 <?php
+    require_once("common.php");
     $configfile = __DIR__ .'/config.json';
     $configjson = file_get_contents($configfile);
     $configdata = json_decode($configjson, true);
+    //logMe($configdata['wait']);
 ?>
 <html>
     <head>
@@ -16,7 +18,7 @@
         <script type="text/javascript">
             var nosave = <?=($configdata['nosave'])?1:0?>; // ($user['permissions'] == 'admin') ? true : false;
             var liveonly = <?=($configdata['live'])?1:0?>;
-            var wait = <?=$configdata['wait']?> / 1000;
+            var wait = <?=($configdata['wait']+0)?> / 1000;
             var domain = "<?=$configdata['domain']?>";
             $('document').ready(function() {
                 refreshJson();

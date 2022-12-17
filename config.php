@@ -21,10 +21,15 @@
             $('document').ready(function() {
                 fillUpConfigTable();
             });
+            // TODO: config table below: live, save, domain and wait for UI
+            // same for metrics
+            // also - other metrics?
+            // we could build the wifi signal/noise ;)
         </script>
     </head>
     <body>
 <table cellspacing='0' id="devices"> <!-- cellspacing='0' is important, must stay &#xf0c9; -->
+
 
 
 </table>

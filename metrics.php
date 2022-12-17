@@ -97,7 +97,7 @@ header('Content-Type: text/plain; charset=utf-8');
 
 logMe("metrics started");
 
-// TODO: load from config file instead
+// TODO: load from config file instead && have separate configs for UI and metrics
 $domain = $_GET["domain"];
 if ($domain == "") {
     $domain = "_googlecast._tcp.local"; // default domain
