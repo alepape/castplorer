@@ -17,7 +17,7 @@ Uses https://github.com/mohsen1/json-formatter-js for detailed output of device 
 
 ## How to use it
 
-clone the repo and use your favourite PHP web server to host
+clone the repo and use your favourite PHP web server to host. Make sure the folder where you host has writing rights for the httpd server so the config file and logs can be created.
 
 ## Features
 
