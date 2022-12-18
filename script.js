@@ -104,8 +104,11 @@ function generateRowContent(row, device) {
 
 function fillUpConfigTable() {
     $('#devices').empty();
-    var config = $('<thead><tr><th class="config" colspan="8" id="config">'+generateConfig()+'</th></tr></thead>');
-    $('#devices').append(config);
+    $('#devices').append($('<thead><tr><th class="config" colspan="8">UI configuration</th></tr></thead>'));
+    $('#devices').append($('<thead><tr><th class="config" colspan="8" id="config_ui">'+generateConfig('ui')+'</th></tr></thead>'));
+    $('#devices').append($('<thead><tr><th class="config" colspan="8">Metrics configuration</th></tr></thead>'));
+    $('#devices').append($('<thead><tr><th class="config" colspan="8" id="config_metrics">'+generateConfig('metrics')+'</th></tr></thead>'));
+    $('#devices').append($('<thead><tr><th class="config" colspan="8"><button onclick="saveAllConfigToFile();" type="button">save all and close</button></th></tr></thead>'));
 }
 
 function fillUpTable(json) {
@@ -156,17 +159,6 @@ function updateUpTable(singleJson, key) {
     setTableClick();
 }
 
-function generateUrlParams() {
-    var params = "domain="+domain+"&wait="+wait;
-    if (nosave) {
-        params += "&nosave=1";
-    }
-    if (liveonly) {
-        params += "&live=1";
-    }
-    return params;
-}
-
 function refreshJson() {
     $('#refresh').addClass("fa-spin");
     var url = "update.php?" + generateUrlParams();
@@ -203,13 +195,13 @@ function generateCtrl(key) {
     return html;
 }
 
-function generateConfig() {
+function generateConfig(scope) {
     html = '&nbsp;';
-    html += 'domain <input id="config_domain" type="text" value="'+domain+'"/>&nbsp;';
-    html += 'wait <input id="config_wait" type="text" maxlength="4" size="4" value="'+wait+'"/>&nbsp;';
-    html += 'live only <input id="config_liveonly" type="checkbox" '+(liveonly ? 'checked' : '')+'/>&nbsp;';
-    html += 'do not save to cache <input id="config_nosave" type="checkbox" '+(nosave ? 'checked' : '')+'/>';
-    html += '<button onclick="saveConfig();" type="button">save</button>'
+    html += 'domain <input id="'+scope+'_config_domain" type="text" value="'+eval(scope).domain+'"/>&nbsp;';
+    html += 'wait <input id="'+scope+'_config_wait" type="text" maxlength="4" size="4" value="'+eval(scope).wait+'"/>&nbsp;';
+    html += 'live only <input id="'+scope+'_config_liveonly" type="checkbox" '+(eval(scope).liveonly ? 'checked' : '')+'/>&nbsp;';
+    html += 'do not save to cache <input id="'+scope+'_config_nosave" type="checkbox" '+(eval(scope).nosave ? 'checked' : '')+'/>';
+    html += '<button onclick="saveScopeConfig(\''+scope+'\');" type="button">save for '+scope+'</button>'
     return html;
 }
 
@@ -275,21 +267,22 @@ function changeIP(key) {
     });
 }
 
-function saveConfig() { // TODO: update me for full page config
+function saveScopeConfig(scope) { // TODO: update me for full page config
     //$('th.config').addClass("collapsed");
-    domain = $('#config_domain').val();
+    domain = $('#'+scope+'_config_domain').val();
     console.log("domain = "+domain);
-    wait = $('#config_wait').val();
+    wait = $('#'+scope+'_config_wait').val();
     console.log("wait = "+wait);
-    nosave = $('#config_nosave').is(":checked");
+    nosave = $('#'+scope+'_config_nosave').is(":checked");
     console.log("nosave = "+nosave);
-    liveonly = $('#config_liveonly').is(":checked");
+    liveonly = $('#'+scope+'_config_liveonly').is(":checked");
     console.log("live = "+liveonly);
-    saveConfigToFile();    
+    saveConfigToFile(scope);
 }
 
-function saveConfigToFile() {
-    var url = "saveconfig.php?" + generateUrlParams();
+function saveAllConfigToFile() {
+
+    var url = "saveconfig.php?full=" + generateJsonParams();
     var settings = {
         "url": url,
         "method": "GET",
@@ -300,4 +293,44 @@ function saveConfigToFile() {
         console.log(response);
         document.location = ".";
     });
+}
+
+function saveConfigToFile(scope) {
+    var url = "saveconfig.php?" + generateUrlParams(scope);
+    var settings = {
+        "url": url,
+        "method": "GET",
+        "timeout": 0,
+    };
+    
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        //document.location = ".";
+    });
+}
+
+function generateJsonParams() { // TODO: make it generic
+    var obj = {};
+    obj.ui = {};
+    obj.ui.domain = $('#ui_config_domain').val();
+    obj.ui.nosave = $('#ui_config_nosave').is(":checked");
+    obj.ui.live = $('#ui_config_liveonly').is(":checked");
+    obj.ui.wait = $('#ui_config_wait').val()*1000;
+    obj.metrics = {};
+    obj.metrics.domain = $('#metrics_config_domain').val();
+    obj.metrics.nosave = $('#metrics_config_nosave').is(":checked");
+    obj.metrics.live = $('#metrics_config_liveonly').is(":checked");
+    obj.metrics.wait = $('#metrics_config_wait').val()*1000;
+    return encodeURI(JSON.stringify(obj));
+}
+
+function generateUrlParams(scope) {
+    var params = "scope="+scope+"&domain="+domain+"&wait="+wait;
+    if (nosave) {
+        params += "&nosave=1";
+    }
+    if (liveonly) {
+        params += "&live=1";
+    }
+    return params;
 }

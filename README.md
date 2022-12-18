@@ -35,12 +35,24 @@ Settings
 
 ## Notes
 
-- designed to be embedded in an iFrame (in Home Assistant for instance) - that's why the UI is so compact
-- obviously, the server hosting the page needs to be on the same network as the GoogleCast devices
+- UI is designed to be embedded in an iFrame (in Home Assistant for instance) - that's why the UI is so compact
+- Obviously, the server hosting the page needs to be on the same network as the GoogleCast devices
 
 ## Prometheus mode
 
-- use /metrics.php
-- available KPIs
+- Use /metrics.php
+- Available KPIs
   - overall number of answers in <wait>
   - response time for each (on lite api)
+
+### Example
+
+```
+scrape_configs:
+  - job_name: "castplorer"
+    scrape_interval: 2m
+    scrape_timeout: 30s
+    static_configs:
+      - targets: ['X.X.X.X:80']
+    metrics_path: /castplorer/metrics.php
+```

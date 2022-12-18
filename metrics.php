@@ -97,18 +97,14 @@ header('Content-Type: text/plain; charset=utf-8');
 
 logMe("metrics started");
 
-// TODO: load from config file instead && have separate configs for UI and metrics
-$domain = $_GET["domain"];
-if ($domain == "") {
-    $domain = "_googlecast._tcp.local"; // default domain
-}
-$nosave = ($_GET["nosave"] == 1);
-$live = ($_GET["live"] == 1);
-$wait = $_GET["wait"];
-if ($wait == "") {
-    $wait = 10; // 10 sec default timeout
-}
-$wait = $wait*1000;
+// TODO: have separate configs for UI and metrics
+$configfile = __DIR__ .'/config.json';
+$configjson = file_get_contents($configfile);
+$configdata = json_decode($configjson, true);
+
+$domain = $configdata['metrics']['domain'];
+$live = $configdata['metrics']['live'];
+$wait = $configdata['metrics']['wait'];
 
 if (!$live) {
     logMe("check local cache");
@@ -127,7 +123,7 @@ if (!$live) {
 // scan 
 logMe("chromecast scan started on ".$domain);
 $castEntities = Chromecast::scan($wait, $domain); 
-// TODO: deal w/ AirServer entries (ex: C02FM1JBQ05N (602)#id=263c8132f2065d05e6c15e7cee9e14c3md=Chromecast Ultranf=1rm=rs	)
+// TODO: add a KPI about total number of entities returned (before filtering)
 
 // cleaning bad keys (mainly spaces)
 foreach($castEntities as $key => $value) {

@@ -14,10 +14,16 @@
         <script type="text/javascript" src="script.js"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <script type="text/javascript">
-            var nosave = <?=($configdata['nosave'])?1:0?>; // ($user['permissions'] == 'admin') ? true : false;
-            var liveonly = <?=($configdata['live'])?1:0?>;
-            var wait = <?=($configdata['wait']+0)?> / 1000;
-            var domain = "<?=$configdata['domain']?>";
+            var ui = {};
+            ui.nosave = <?=($configdata['ui']['nosave'])?1:0?>; // ($user['permissions'] == 'admin') ? true : false;
+            ui.liveonly = <?=($configdata['ui']['live'])?1:0?>;
+            ui.wait = <?=($configdata['ui']['wait']+0)?> / 1000;
+            ui.domain = "<?=$configdata['ui']['domain']?>";
+            var metrics = {};
+            metrics.nosave = <?=($configdata['metrics']['nosave'])?1:0?>; // ($user['permissions'] == 'admin') ? true : false;
+            metrics.liveonly = <?=($configdata['metrics']['live'])?1:0?>;
+            metrics.wait = <?=($configdata['metrics']['wait']+0)?> / 1000;
+            metrics.domain = "<?=$configdata['metrics']['domain']?>";
             $('document').ready(function() {
                 fillUpConfigTable();
             });
