@@ -42,8 +42,8 @@ Settings
 
 - Use /metrics.php
 - Available KPIs
-  - overall number of answers in <wait>
-  - response time for each (on lite api)
+  - Number of devices found via mDNS during the wait time
+  - Response time for eureka_info API call (on HTTP port)
 
 ### Example
 
