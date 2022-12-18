@@ -45,7 +45,9 @@ Settings
   - Number of devices found via mDNS during the wait time
   - Response time for eureka_info API call (on HTTP port)
 
-### Example
+### Examples
+
+Prometheus configuration
 
 ```
 scrape_configs:
@@ -56,3 +58,7 @@ scrape_configs:
       - targets: ['X.X.X.X:80']
     metrics_path: /castplorer/metrics.php
 ```
+
+Resuting Grafana dashboard (with 2 castplorer hosts on separate WiFi)
+
+![Granafa example](./img/grafana.png)
